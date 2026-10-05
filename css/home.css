@@ -1,0 +1,838 @@
+/* =========================================================
+   TIS EAST AFRICA — HOME
+   SOLUTIONS
+========================================================= */
+
+.home-solutions {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    margin-top: -32px;
+
+    background: #f3f1ec;
+    color: var(--black);
+
+    border-radius: 32px 32px 0 0;
+}
+
+.home-solutions-inner {
+    width: 100%;
+    padding:
+        70px var(--page-padding) 55px;
+}
+
+
+/* =========================================================
+   OLD HEADING — HIDDEN ON HOMEPAGE
+========================================================= */
+
+.home-solutions-heading {
+    display: none;
+}
+
+
+/* =========================================================
+   APPLICATION SELECTOR
+========================================================= */
+
+.application-selector {
+    position: relative;
+    z-index: 20;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 340px;
+    height: 54px;
+
+    margin: 0 auto 42px;
+    padding: 5px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 28px;
+
+    background: #171717;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.08);
+
+    transition:
+        height 0.4s cubic-bezier(.2, .8, .2, 1),
+        border-radius 0.4s ease;
+}
+
+
+/* Open selector when hovered/focused */
+
+.application-selector:hover,
+.application-selector:focus-within {
+    height: 206px;
+    border-radius: 25px;
+}
+
+
+/* =========================================================
+   SELECTOR OPTIONS
+========================================================= */
+
+.application-option {
+    position: relative;
+
+    flex: 0 0 43px;
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 0 22px;
+
+    border: 0;
+    border-radius: 21px;
+
+    background: transparent;
+
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 500;
+
+    text-align: left;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* Active option appears first */
+
+.application-option.active {
+    order: -1;
+
+    background: #f5f4f0;
+    color: #111;
+}
+
+
+/* little dropdown arrow */
+
+.application-option.active::after {
+    content: "⌄";
+
+    position: absolute;
+
+    top: 50%;
+    right: 18px;
+
+    font-size: 1rem;
+    line-height: 1;
+
+    transform: translateY(-58%);
+
+    color: #111;
+}
+
+
+/* Hide inactive options until selector opens */
+
+.application-option:not(.active) {
+    opacity: 0;
+
+    transition:
+        opacity 0.2s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.application-selector:hover .application-option:not(.active),
+
+.application-selector:focus-within .application-option:not(.active) {
+    opacity: 1;
+}
+
+
+/* Hover option */
+
+.application-option:not(.active):hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+}
+
+
+/* =========================================================
+   ACTIVE APPLICATION INTRO
+========================================================= */
+
+.application-intro {
+    display: grid;
+
+    grid-template-columns:
+        70px minmax(320px, 1fr) minmax(340px, 0.9fr);
+
+    align-items: end;
+
+    gap: 34px;
+
+    width: 100%;
+    max-width: none;
+
+    margin: 0 0 30px;
+
+    padding-top: 24px;
+
+    border-top:
+        1px solid rgba(0, 0, 0, 0.16);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.application-intro.is-changing {
+    opacity: 0;
+    transform: translateY(5px);
+}
+
+
+/* Number */
+
+#application-number {
+    align-self: start;
+
+    padding-top: 8px;
+
+    font-family: var(--sans);
+    font-size: 0.58rem;
+    font-weight: 500;
+
+    letter-spacing: 0.12em;
+
+    color: var(--red);
+}
+
+
+/* Residential / Hospitality etc */
+
+.application-intro h3 {
+    margin: 0;
+
+    font-family: var(--sans);
+    font-size: clamp(3rem, 4vw, 4.7rem);
+    font-weight: 400;
+
+    line-height: 0.92;
+    letter-spacing: -0.055em;
+}
+
+
+/* Description */
+
+.application-intro p {
+    max-width: 470px;
+
+    margin: 0 0 4px;
+
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    line-height: 1.55;
+
+    color: rgba(0, 0, 0, 0.58);
+}
+
+
+/* =========================================================
+   FOUR FEATURE CARDS
+========================================================= */
+
+.application-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 10px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.application-card,
+.application-card-large,
+.application-card-wide {
+    position: relative;
+
+    grid-column: auto;
+    grid-row: auto;
+
+    width: 100%;
+    height: clamp(470px, 37vw, 610px);
+
+    padding: 0;
+
+    overflow: hidden;
+
+    border: 0;
+    border-radius: 2px;
+
+    background: #d9d7d1;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.application-card-image {
+    position: absolute;
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+
+    transform: scale(1.01);
+
+    transition:
+        transform 0.9s cubic-bezier(.2, .8, .2, 1),
+        filter 0.6s ease;
+}
+
+
+/* =========================================================
+   TEMPORARY PHOTOGRAPHY
+========================================================= */
+
+.card-image-lighting {
+    background-image:
+        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=90");
+}
+
+
+.card-image-climate {
+    background-image:
+        url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=90");
+}
+
+
+.card-image-security {
+    background-image:
+        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=90");
+}
+
+
+.card-image-entertainment {
+    background-image:
+        url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1800&q=90");
+}
+
+
+/* =========================================================
+   IMAGE SHADE
+========================================================= */
+
+.application-card-shade {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(to top,
+            rgba(0, 0, 0, 0.62) 0%,
+            rgba(0, 0, 0, 0.10) 42%,
+            rgba(0, 0, 0, 0.01) 75%);
+
+    transition:
+        background 0.45s ease;
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.application-card-content {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        34px 1fr auto;
+
+    gap: 10px;
+
+    align-items: end;
+
+    padding: 25px 26px;
+
+    color: white;
+}
+
+
+.application-card-content>span {
+    padding-bottom: 4px;
+
+    font-family: var(--sans);
+    font-size: 0.52rem;
+
+    letter-spacing: 0.1em;
+
+    color: rgba(255, 255, 255, 0.62);
+}
+
+
+.application-card-content h4 {
+    margin: 0;
+
+    font-family: var(--sans);
+    font-size: clamp(1.65rem, 2.1vw, 2.6rem);
+    font-weight: 400;
+
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+
+.application-card-content i {
+    padding-bottom: 4px;
+
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    font-style: normal;
+
+    opacity: 0;
+
+    transform: translate(-7px, 7px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.application-card:hover .application-card-image {
+    transform: scale(1.045);
+}
+
+
+.application-card:hover .application-card-shade {
+    background:
+        linear-gradient(to top,
+            rgba(0, 0, 0, 0.72) 0%,
+            rgba(0, 0, 0, 0.08) 55%,
+            rgba(0, 0, 0, 0.01) 100%);
+}
+
+
+.application-card:hover .application-card-content i {
+    opacity: 1;
+
+    transform: translate(0, 0);
+}
+
+
+/* =========================================================
+   FEATURE PANEL
+========================================================= */
+
+.feature-panel {
+    position: relative;
+
+    max-height: 0;
+
+    margin-top: 0;
+
+    overflow: hidden;
+
+    background: #111;
+    color: white;
+
+    opacity: 0;
+
+    transition:
+        max-height 0.7s cubic-bezier(.2, .8, .2, 1),
+        opacity 0.45s ease,
+        margin-top 0.7s cubic-bezier(.2, .8, .2, 1);
+}
+
+
+.feature-panel.open {
+    max-height: 520px;
+
+    margin-top: 10px;
+
+    opacity: 1;
+}
+
+
+.feature-panel-close {
+    position: absolute;
+
+    top: 24px;
+    right: 26px;
+
+    z-index: 3;
+
+    width: 38px;
+    height: 38px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    font-size: 1.35rem;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.feature-panel-close:hover {
+    background: white;
+    color: black;
+}
+
+
+.feature-panel-content {
+    max-width: 760px;
+
+    padding:
+        clamp(55px, 7vw, 90px) clamp(35px, 7vw, 100px);
+}
+
+
+.feature-panel-label {
+    display: block;
+
+    margin-bottom: 28px;
+
+    font-size: 0.57rem;
+
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+
+    color: var(--red);
+}
+
+
+.feature-panel-content h3 {
+    margin: 0 0 24px;
+
+    font-family: var(--sans);
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    font-weight: 400;
+
+    line-height: 0.92;
+    letter-spacing: -0.05em;
+}
+
+
+.feature-panel-content p {
+    max-width: 580px;
+
+    margin: 0;
+
+    font-size: 0.95rem;
+    line-height: 1.65;
+
+    color: rgba(255, 255, 255, 0.64);
+}
+
+
+.feature-panel-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    margin-top: 38px;
+    padding-bottom: 7px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.45);
+
+    font-size: 0.65rem;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    color: white;
+}
+
+
+/* =========================================================
+   SECTION FOOTER
+========================================================= */
+
+.home-solutions-footer {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 50px;
+
+    margin-top: 30px;
+    padding-top: 22px;
+
+    border-top:
+        1px solid rgba(0, 0, 0, 0.15);
+}
+
+
+.home-solutions-footer p {
+    max-width: 430px;
+
+    margin: 0;
+
+    font-size: 0.8rem;
+    line-height: 1.55;
+
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
+.home-solutions-footer a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding-bottom: 6px;
+
+    border-bottom:
+        1px solid rgba(0, 0, 0, 0.32);
+
+    font-size: 0.64rem;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    color: var(--black);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .home-solutions {
+        margin-top: -24px;
+
+        border-radius:
+            24px 24px 0 0;
+    }
+
+
+    .home-solutions-inner {
+        padding-top: 55px;
+        padding-bottom: 50px;
+    }
+
+
+    .application-selector {
+        width: min(340px, 100%);
+
+        margin-bottom: 34px;
+    }
+
+
+    .application-intro {
+        grid-template-columns:
+            45px 0.9fr 1fr;
+
+        gap: 25px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .application-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 8px;
+    }
+
+
+    .application-card,
+    .application-card-large,
+    .application-card-wide {
+        height: 430px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .home-solutions {
+        margin-top: -20px;
+
+        border-radius:
+            20px 20px 0 0;
+    }
+
+
+    .home-solutions-inner {
+        padding-top: 45px;
+        padding-bottom: 42px;
+    }
+
+
+    .application-selector {
+        width: 100%;
+
+        margin-bottom: 30px;
+    }
+
+
+    .application-intro {
+        grid-template-columns:
+            30px 1fr;
+
+        gap: 8px 14px;
+
+        margin-bottom: 24px;
+
+        padding-top: 18px;
+    }
+
+
+    #application-number {
+        grid-column: 1;
+        grid-row: 1;
+
+        padding-top: 5px;
+    }
+
+
+    .application-intro h3 {
+        grid-column: 2;
+        grid-row: 1;
+
+        font-size:
+            clamp(2.6rem, 12vw, 3.7rem);
+    }
+
+
+    .application-intro p {
+        grid-column: 2;
+
+        max-width: 330px;
+
+        margin-top: 7px;
+
+        font-size: 0.82rem;
+    }
+
+
+    .application-grid {
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 7px;
+    }
+
+
+    .application-card,
+    .application-card-large,
+    .application-card-wide {
+        height: 300px;
+    }
+
+
+    .application-card-content {
+        grid-template-columns:
+            22px 1fr;
+
+        padding: 16px 14px;
+    }
+
+
+    .application-card-content h4 {
+        font-size:
+            clamp(1.3rem, 6vw, 1.9rem);
+    }
+
+
+    .application-card-content i {
+        display: none;
+    }
+
+
+    .home-solutions-footer {
+        display: grid;
+
+        gap: 22px;
+
+        margin-top: 25px;
+        padding-top: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .application-card,
+    .application-card-large,
+    .application-card-wide {
+        height: 260px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .application-selector,
+    .application-option,
+    .application-intro,
+    .application-card-image,
+    .application-card-content i,
+    .feature-panel {
+        transition: none;
+    }}
+

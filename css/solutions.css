@@ -1,0 +1,819 @@
+/* =========================================================
+   TIS EAST AFRICA
+   SOLUTIONS
+========================================================= */
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.solutions-hero {
+    position: relative;
+    min-height: 82vh;
+    overflow: hidden;
+    background: #090909;
+    color: #fff;
+}
+
+.solutions-hero-media {
+    position: absolute;
+    inset: 0;
+
+    background:
+        url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=88") center / cover no-repeat;
+
+    transform: scale(1.015);
+}
+
+.solutions-hero-shade {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(180deg,
+            rgba(0, 0, 0, 0.30) 0%,
+            rgba(0, 0, 0, 0.04) 40%,
+            rgba(0, 0, 0, 0.68) 100%);
+}
+
+.solutions-hero-label {
+    position: absolute;
+    z-index: 2;
+
+    top: 110px;
+    left: clamp(24px, 4vw, 64px);
+
+    display: flex;
+    gap: 18px;
+
+    font-size: 0.66rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.solutions-hero-content {
+    position: relative;
+    z-index: 2;
+
+    min-height: 82vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding:
+        140px clamp(24px, 4vw, 64px) clamp(52px, 7vh, 84px);
+}
+
+.solutions-hero-content .section-tag {
+    margin-bottom: 22px;
+}
+
+.solutions-hero h1 {
+    max-width: 1100px;
+    margin: 0;
+
+    font-size: clamp(3.8rem, 7.3vw, 8.2rem);
+    font-weight: 400;
+    line-height: 0.91;
+    letter-spacing: -0.065em;
+
+    color: #fff;
+}
+
+.solutions-hero h1 em {
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+.solutions-hero-bottom {
+    width: 100%;
+    margin-top: clamp(34px, 5vh, 64px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+.solutions-hero-bottom>p {
+    max-width: 430px;
+    margin: 0;
+
+    font-size: 0.94rem;
+    font-weight: 300;
+    line-height: 1.65;
+
+    color: rgba(255, 255, 255, 0.72);
+}
+
+
+/* =========================================================
+   SYSTEMS EXPLORER
+========================================================= */
+
+.systems-explorer {
+    position: relative;
+    z-index: 3;
+
+    margin-top: -22px;
+
+    background: #f3f2ee;
+    color: #111;
+
+    border-radius: 24px 24px 0 0;
+}
+
+.systems-explorer-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+
+    padding:
+        clamp(62px, 7vw, 96px) clamp(24px, 4vw, 64px) clamp(70px, 7vw, 100px);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.systems-heading {
+    display: grid;
+    grid-template-columns: 60px minmax(0, 1fr) minmax(260px, 370px);
+    align-items: end;
+
+    gap: clamp(24px, 4vw, 64px);
+
+    padding-bottom: 44px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+}
+
+.systems-number {
+    align-self: start;
+
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+
+    color: var(--red);
+}
+
+.systems-heading h2 {
+    max-width: 720px;
+    margin: 0;
+
+    font-size: clamp(2.8rem, 4.7vw, 5.5rem);
+    font-weight: 400;
+    line-height: 0.94;
+    letter-spacing: -0.055em;
+}
+
+.systems-heading h2 em {
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+.systems-heading>p {
+    margin: 0;
+
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.7;
+
+    color: #666;
+}
+
+
+/* =========================================================
+   SELECTOR
+========================================================= */
+
+.systems-selector {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 22px 0;
+
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.systems-selector::-webkit-scrollbar {
+    display: none;
+}
+
+.system-option {
+    flex: 1 0 auto;
+
+    appearance: none;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+
+    padding: 12px 10px;
+
+    background: transparent;
+    color: #777;
+
+    font: inherit;
+    font-size: 0.72rem;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        color 220ms ease,
+        border-color 220ms ease;
+}
+
+.system-option:hover {
+    color: #111;
+    border-color: #777;
+}
+
+.system-option.active {
+    color: #111;
+    border-color: var(--red);
+}
+
+
+/* =========================================================
+   SYSTEM CANVAS
+========================================================= */
+
+.system-display {
+    position: relative;
+
+    min-height: clamp(520px, 65vh, 720px);
+
+    margin-top: 20px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #111;
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.system-image {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+
+    background:
+        url("https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1800&q=88") center / cover no-repeat;
+
+    transition:
+        opacity 240ms ease,
+        transform 900ms cubic-bezier(.2, .7, .2, 1);
+}
+
+.system-display:hover .system-image {
+    transform: scale(1.015);
+}
+
+.system-image.is-changing {
+    opacity: 0.25;
+}
+
+.system-display-shade {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(180deg,
+            rgba(0, 0, 0, 0.34) 0%,
+            rgba(0, 0, 0, 0.02) 43%,
+            rgba(0, 0, 0, 0.54) 100%),
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.18),
+            transparent 55%);
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.system-status {
+    position: absolute;
+    z-index: 3;
+
+    top: 26px;
+    left: 28px;
+    right: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+
+    font-size: 0.63rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.72);
+}
+
+#system-number {
+    color: #fff;
+}
+
+
+/* =========================================================
+   GLASS INFORMATION PANEL
+========================================================= */
+
+.system-glass {
+    position: absolute;
+    z-index: 3;
+
+    left: 28px;
+    bottom: 28px;
+
+    width: min(660px, calc(100% - 56px));
+
+    padding: 28px;
+
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 15px;
+
+    background: rgba(12, 12, 12, 0.62);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 18px 60px rgba(0, 0, 0, 0.18);
+
+    color: #fff;
+
+    transition:
+        opacity 180ms ease,
+        transform 300ms ease;
+}
+
+.system-image-label {
+    display: block;
+
+    margin-bottom: 28px;
+
+    font-size: 0.61rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.system-glass h3 {
+    max-width: 570px;
+    margin: 0;
+
+    font-size: clamp(2.4rem, 3.8vw, 4.8rem);
+    font-weight: 400;
+    line-height: 0.94;
+    letter-spacing: -0.055em;
+
+    color: #fff;
+}
+
+.system-glass h3 em {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: inherit;
+}
+
+.system-glass-bottom {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+
+    align-items: end;
+    gap: 34px;
+
+    margin-top: 32px;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.system-glass-bottom>p {
+    max-width: 340px;
+    margin: 0;
+
+    font-size: 0.78rem;
+    font-weight: 300;
+    line-height: 1.65;
+
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.system-capabilities {
+    max-width: 230px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    gap: 5px;
+}
+
+.system-capabilities span {
+    padding: 6px 9px;
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+
+    font-size: 0.58rem;
+    font-weight: 400;
+
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* =========================================================
+   CONNECTED EXPERIENCE
+========================================================= */
+
+.connected-experience {
+    position: relative;
+
+    min-height: 62vh;
+
+    overflow: hidden;
+
+    background: #090909;
+    color: #fff;
+}
+
+.connected-background {
+    position: absolute;
+    inset: 0;
+
+    background:
+        url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=88") center / cover no-repeat;
+}
+
+.connected-shade {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.84) 0%,
+            rgba(0, 0, 0, 0.46) 52%,
+            rgba(0, 0, 0, 0.22) 100%),
+        linear-gradient(0deg,
+            rgba(0, 0, 0, 0.55),
+            transparent 60%);
+}
+
+.connected-content {
+    position: relative;
+    z-index: 2;
+
+    min-height: 62vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding:
+        clamp(50px, 6vw, 80px) clamp(24px, 4vw, 64px);
+}
+
+.connected-label {
+    font-size: 0.64rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.58);
+}
+
+.connected-content h2 {
+    max-width: 1000px;
+
+    margin: clamp(70px, 10vh, 120px) 0 44px;
+
+    font-size: clamp(3.4rem, 6.3vw, 7.5rem);
+    font-weight: 400;
+    line-height: 0.92;
+    letter-spacing: -0.065em;
+}
+
+.connected-content h2 em {
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+.connected-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+
+    padding-top: 24px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.connected-bottom p {
+    max-width: 500px;
+    margin: 0;
+
+    font-size: 0.88rem;
+    font-weight: 300;
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.connected-bottom a {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+
+    flex-shrink: 0;
+
+    color: #fff;
+
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.connected-bottom a span {
+    color: var(--red);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 980px) {
+
+    .systems-heading {
+        grid-template-columns: 45px 1fr;
+    }
+
+    .systems-heading>p {
+        grid-column: 2;
+
+        max-width: 470px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* Hero */
+
+    .solutions-hero {
+        min-height: 76svh;
+    }
+
+    .solutions-hero-content {
+        min-height: 76svh;
+
+        padding:
+            120px 20px 38px;
+    }
+
+    .solutions-hero-label {
+        top: 92px;
+        left: 20px;
+
+        font-size: 0.56rem;
+    }
+
+    .solutions-hero h1 {
+        font-size: clamp(3.15rem, 15vw, 4.5rem);
+    }
+
+    .solutions-hero-bottom {
+        display: grid;
+        grid-template-columns: 1fr auto;
+
+        gap: 18px;
+
+        margin-top: 28px;
+    }
+
+    .solutions-hero-bottom>p {
+        max-width: 230px;
+
+        font-size: 0.75rem;
+        line-height: 1.55;
+    }
+
+
+    /* Explorer */
+
+    .systems-explorer {
+        margin-top: -16px;
+
+        border-radius: 18px 18px 0 0;
+    }
+
+    .systems-explorer-inner {
+        padding:
+            48px 20px 58px;
+    }
+
+    .systems-heading {
+        grid-template-columns: 30px 1fr;
+        gap: 14px;
+
+        padding-bottom: 30px;
+    }
+
+    .systems-heading h2 {
+        font-size: clamp(2.45rem, 12vw, 3.5rem);
+    }
+
+    .systems-heading>p {
+        grid-column: 2;
+
+        max-width: 280px;
+
+        font-size: 0.77rem;
+        line-height: 1.6;
+    }
+
+
+    /* Selector */
+
+    .systems-selector {
+        width: calc(100% + 20px);
+
+        margin-right: -20px;
+
+        padding: 16px 0;
+
+        gap: 22px;
+    }
+
+    .system-option {
+        flex: 0 0 auto;
+
+        padding: 9px 0;
+
+        font-size: 0.66rem;
+    }
+
+
+    /* Canvas */
+
+    .system-display {
+        min-height: 540px;
+
+        margin-top: 12px;
+
+        border-radius: 14px;
+    }
+
+    .system-status {
+        top: 18px;
+        left: 18px;
+        right: 18px;
+
+        padding-bottom: 14px;
+
+        font-size: 0.54rem;
+    }
+
+    .system-glass {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+
+        width: auto;
+
+        padding: 20px;
+
+        border-radius: 12px;
+
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+    }
+
+    .system-image-label {
+        margin-bottom: 20px;
+
+        font-size: 0.54rem;
+    }
+
+    .system-glass h3 {
+        max-width: 330px;
+
+        font-size: clamp(2.35rem, 11vw, 3.25rem);
+        line-height: 0.95;
+    }
+
+    .system-glass-bottom {
+        display: block;
+
+        margin-top: 24px;
+        padding-top: 17px;
+    }
+
+    .system-glass-bottom>p {
+        max-width: 290px;
+
+        font-size: 0.74rem;
+        line-height: 1.55;
+    }
+
+    .system-capabilities {
+        max-width: none;
+
+        justify-content: flex-start;
+
+        margin-top: 18px;
+    }
+
+    .system-capabilities span {
+        font-size: 0.55rem;
+    }
+
+
+    /* Connected */
+
+    .connected-experience {
+        min-height: 58svh;
+    }
+
+    .connected-content {
+        min-height: 58svh;
+
+        padding: 42px 20px 34px;
+    }
+
+    .connected-content h2 {
+        margin: 70px 0 36px;
+
+        font-size: clamp(3rem, 14vw, 4.5rem);
+    }
+
+    .connected-bottom {
+        display: block;
+
+        padding-top: 20px;
+    }
+
+    .connected-bottom p {
+        max-width: 290px;
+
+        font-size: 0.76rem;
+        line-height: 1.6;
+    }
+
+    .connected-bottom a {
+        margin-top: 26px;
+
+        font-size: 0.65rem;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .system-image,
+    .system-glass,
+    .system-option {
+        transition: none;
+    }
+
+}

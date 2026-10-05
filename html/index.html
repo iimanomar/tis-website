@@ -13,11 +13,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/home.css">
+
 </head>
 
 <body>
@@ -34,8 +33,8 @@
 
         <nav class="desktop-nav" aria-label="Main navigation">
             <a href="solutions.html">Solutions</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
+            <a href="projects.html">Projects</a>            
+            <a href="experience.html">Experience</a>
             <a href="partner.html">Partners</a>
             <a href="about.html">About</a>
         </nav>
@@ -84,440 +83,222 @@
                 </h1>
 
                 <div class="hero-bottom">
-
+                
                     <p>
                         Smart homes and intelligent buildings,
                         designed to feel effortless.
                     </p>
-
-                    <a href="#intro" class="text-link light-link">
+                
+                    <a href="#solutions" class="text-link light-link">
                         Discover TIS
                         <span>↓</span>
                     </a>
-
+                
                 </div>
-
-            </div>
-
-            <div class="hero-index">
-                <span>01</span>
-                <span>/</span>
-                <span>06</span>
-            </div>
-
         </section>
 
+<!-- =====================================================
+     03 — SOLUTIONS BY SPACE
+===================================================== -->
 
-        <!-- =========================================
-             INTRO
-        ========================================== -->
+<section class="home-solutions section-light" id="solutions">
 
-        <section class="intro section-light" id="intro">
+    <div class="home-solutions-inner">
 
-            <div class="section-number">
-                01 / TIS EAST AFRICA
-            </div>
+        <!-- SECTION INTRO -->
 
-            <div class="intro-grid">
+        <!-- APPLICATION SELECTOR -->
 
-                <div class="intro-title">
-                    <h2>
-                        Technology should
-                        disappear into the
-                        way you <em>live.</em>
-                    </h2>
-                </div>
+        <div class="application-selector" aria-label="Choose a space">
 
-                <div class="intro-copy">
+            <button class="application-option active" data-application="residential" type="button">
+                Residential
+            </button>
 
-                    <p>
-                        We create intelligent environments where lighting,
-                        climate, security, entertainment and energy work
-                        together as one.
-                    </p>
+            <button class="application-option" data-application="hospitality" type="button">
+                Hospitality
+            </button>
 
-                    <p>
-                        No complexity. No clutter. Just a space that responds
-                        naturally to the people inside it.
-                    </p>
+            <button class="application-option" data-application="commercial" type="button">
+                Commercial
+            </button>
 
-                    <a href="about.html" class="text-link dark-link">
-                        Discover TIS
-                        <span>↗</span>
-                    </a>
+            <button class="application-option" data-application="cinema" type="button">
+                Home Cinema
+            </button>
 
-                </div>
-
-            </div>
-
-        </section>
+        </div>
 
 
-        <!-- =========================================
-             INTERACTIVE EXPERIENCE
-        ========================================== -->
+        <!-- ACTIVE APPLICATION INTRO -->
 
-        <section class="experience" id="experience">
+        <div class="application-intro">
 
-            <div class="experience-heading">
+            <span id="application-number">
+                01
+            </span>
 
-                <div class="section-number light-number">
-                    02 / EXPERIENCE TIS
-                </div>
+            <h3 id="application-title">
+                Residential
+            </h3>
 
-                <h2>
-                    See what your
-                    <em>space can do.</em>
-                </h2>
+            <p id="application-description">
+                Technology that becomes part of the home —
+                intuitive, discreet and designed around the way you live.
+            </p>
 
-            </div>
+        </div>
 
-            <div class="experience-stage">
 
-                <div class="experience-background"></div>
+        <!-- CONTENT TILES -->
 
-                <div class="experience-overlay"></div>
+        <div class="application-grid">
 
-                <div class="experience-interface">
 
-                    <p class="interface-label">
-                        Explore the space
-                    </p>
+            <!-- FEATURE 01 -->
 
-                    <div class="system-selector">
+            <button class="application-card application-card-large" type="button" data-feature="lighting">
 
-                        <button class="system active" data-system="lighting">
-                            <span class="system-number">01</span>
-                            <span class="system-name">Lighting</span>
-                        </button>
+                <div class="application-card-image card-image-lighting"></div>
 
-                        <button class="system" data-system="climate">
-                            <span class="system-number">02</span>
-                            <span class="system-name">Climate</span>
-                        </button>
+                <div class="application-card-shade"></div>
 
-                        <button class="system" data-system="curtains">
-                            <span class="system-number">03</span>
-                            <span class="system-name">Curtains</span>
-                        </button>
+                <div class="application-card-content">
 
-                        <button class="system" data-system="security">
-                            <span class="system-number">04</span>
-                            <span class="system-name">Security</span>
-                        </button>
+                    <span>01</span>
 
-                        <button class="system" data-system="entertainment">
-                            <span class="system-number">05</span>
-                            <span class="system-name">Entertainment</span>
-                        </button>
+                    <h4>Lighting</h4>
 
-                        <button class="system" data-system="energy">
-                            <span class="system-number">06</span>
-                            <span class="system-name">Energy</span>
-                        </button>
-
-                    </div>
-
-                    <div class="system-info">
-
-                        <span class="system-status">
-                            SYSTEM / 01
-                        </span>
-
-                        <h3 id="system-title">
-                            Lighting
-                        </h3>
-
-                        <p id="system-description">
-                            Set the atmosphere without thinking about it.
-                            One touch transforms the entire space.
-                        </p>
-
-                    </div>
+                    <i>↗</i>
 
                 </div>
 
-            </div>
-
-        </section>
+            </button>
 
 
-        <!-- =========================================
-             SOLUTIONS
-        ========================================== -->
+            <!-- FEATURE 02 -->
 
-        <section class="solutions section-light">
+            <button class="application-card" type="button" data-feature="climate">
 
-            <div class="section-number">
-                03 / WHAT WE CREATE
-            </div>
+                <div class="application-card-image card-image-climate"></div>
 
-            <div class="solutions-heading">
+                <div class="application-card-shade"></div>
 
-                <h2>
-                    Designed around
-                    <em>how you live.</em>
-                </h2>
+                <div class="application-card-content">
 
-                <a href="solutions.html" class="text-link dark-link">
-                    Explore solutions
-                    <span>↗</span>
-                </a>
+                    <span>02</span>
 
-            </div>
+                    <h4>Climate</h4>
 
-
-            <div class="solution-list">
-
-                <a href="solutions.html#residential" class="solution-item">
-
-                    <div class="solution-image residential-image"></div>
-
-                    <div class="solution-meta">
-                        <span>01</span>
-
-                        <h3>Residential</h3>
-
-                        <p>
-                            Homes that understand how you live.
-                        </p>
-
-                        <span class="solution-arrow">↗</span>
-                    </div>
-
-                </a>
-
-
-                <a href="solutions.html#hospitality" class="solution-item offset">
-
-                    <div class="solution-image hospitality-image"></div>
-
-                    <div class="solution-meta">
-                        <span>02</span>
-
-                        <h3>Hospitality</h3>
-
-                        <p>
-                            Smarter stays. Seamless experiences.
-                        </p>
-
-                        <span class="solution-arrow">↗</span>
-                    </div>
-
-                </a>
-
-
-                <a href="solutions.html#commercial" class="solution-item">
-
-                    <div class="solution-image commercial-image"></div>
-
-                    <div class="solution-meta">
-                        <span>03</span>
-
-                        <h3>Commercial</h3>
-
-                        <p>
-                            Intelligence built into every square metre.
-                        </p>
-
-                        <span class="solution-arrow">↗</span>
-                    </div>
-
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             PARTNER MARQUEE
-        ========================================== -->
-
-        <section class="partner-strip">
-
-            <div class="partner-label">
-                Integrated with the world's leading technologies
-            </div>
-
-            <div class="marquee">
-
-                <div class="marquee-track">
-
-                    <span>TIS</span>
-                    <span>DNAKE</span>
-                    <span>MARCAUDIO</span>
-                    <span>MCLELLAND</span>
-                    
-                    <span>TIS</span>
-                    <span>DNAKE</span>
-                    <span>MARCAUDIO</span>
-                    <span>MCLELLAND</span>
-                    
+                    <i>↗</i>
 
                 </div>
 
-            </div>
-
-        </section>
+            </button>
 
 
-        <!-- =========================================
-             PROJECTS
-        ========================================== -->
+            <!-- FEATURE 03 -->
 
-        <section class="projects" id="projects">
+            <button class="application-card" type="button" data-feature="security">
 
-            <div class="projects-header">
+                <div class="application-card-image card-image-security"></div>
 
-                <div>
-                    <div class="section-number light-number">
-                        04 / SELECTED WORK
-                    </div>
+                <div class="application-card-shade"></div>
 
-                    <h2>
-                        Spaces made
-                        <em>intelligent.</em>
-                    </h2>
-                </div>
+                <div class="application-card-content">
 
-                <a href="#" class="text-link light-link">
-                    View projects
-                    <span>↗</span>
-                </a>
+                    <span>03</span>
 
-            </div>
+                    <h4>Security</h4>
 
-
-            <div class="project-grid">
-
-                <article class="project-card project-large">
-
-                    <div class="project-image project-one"></div>
-
-                    <div class="project-details">
-                        <span>Private Residence</span>
-                        <span>Nairobi, Kenya</span>
-                        <span>01</span>
-                    </div>
-
-                </article>
-
-
-                <article class="project-card">
-
-                    <div class="project-image project-two"></div>
-
-                    <div class="project-details">
-                        <span>Hospitality</span>
-                        <span>East Africa</span>
-                        <span>02</span>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             EXPERIENCE CENTRE CTA
-        ========================================== -->
-
-        <section class="visit section-light">
-
-            <div class="visit-label">
-                05 / NAIROBI EXPERIENCE CENTRE
-            </div>
-
-            <div class="visit-content">
-
-                <h2>
-                    Don't just see it.
-                    <em>Experience it.</em>
-                </h2>
-
-                <div class="visit-details">
-
-                    <p>
-                        Some things make more sense when you feel them.
-                        Experience intelligent lighting, climate, audio,
-                        security and control working together in one space.
-                    </p>
-
-                    <div class="address">
-                        <span>Binaa Complex</span>
-                        <span>1st Floor</span>
-                        <span>Langata Road · Nairobi</span>
-                    </div>
-
-                    <a href="contact.html" class="button-dark">
-                        Book a private demo
-                        <span>↗</span>
-                    </a>
+                    <i>↗</i>
 
                 </div>
 
-            </div>
-
-        </section>
+            </button>
 
 
-        <!-- =========================================
-             PARTNER PROGRAMME
-        ========================================== -->
+            <!-- FEATURE 04 -->
 
-        <section class="partner-cta">
+            <button class="application-card application-card-wide" type="button" data-feature="entertainment">
 
-            <div class="partner-cta-bg"></div>
-            <div class="partner-cta-shade"></div>
+                <div class="application-card-image card-image-entertainment"></div>
 
-            <div class="partner-cta-content">
+                <div class="application-card-shade"></div>
 
-                <div class="section-number light-number">
-                    06 / TIS PARTNER PROGRAMME
+                <div class="application-card-content">
+
+                    <span>04</span>
+
+                    <h4>Entertainment</h4>
+
+                    <i>↗</i>
+
                 </div>
 
-                <h2>
-                    For the people
-                    <em>who build.</em>
-                </h2>
+            </button>
 
-                <p>
-                    Architects. Designers. Developers.
-                    System integrators.
-                </p>
-
-                <a href="partner.html" class="button-light">
-                    Work with TIS
-                    <span>↗</span>
-                </a>
-
-            </div>
-
-        </section>
+        </div>
 
 
-        <!-- =========================================
-             FINAL CTA
-        ========================================== -->
 
-        <section class="final-cta">
+        <!-- BOTTOM LINK -->
 
-            <p>Have a project in mind?</p>
+        <div class="home-solutions-footer">
 
-            <a href="contact.html">
-                Let's create
-                <em>something smarter.</em>
+            <p>
+                From private homes to hotels and commercial spaces,
+                TIS brings every system together.
+            </p>
+
+            <a href="solutions.html">
+                Explore all solutions
                 <span>↗</span>
             </a>
 
-        </section>
+        </div>
 
-    </main>
+    </div>
 
+</section>
 
+        
+        <!-- =========================================
+             PARTNER MARQUEE
+        ========================================== -->
+<section class="partner-strip" aria-label="Technology partners">
+
+    <div class="marquee">
+
+        <div class="marquee-track">
+
+            <div class="marquee-group">
+                <span>TIS</span>
+                <i></i>
+                <span>DNAKE</span>
+                <i></i>
+                <span>MARCAUDIO</span>
+                <i></i>
+                <span>MCLELLAND</span>
+                <i></i>
+            </div>
+
+            <div class="marquee-group" aria-hidden="true">
+                <span>TIS</span>
+                <i></i>
+                <span>DNAKE</span>
+                <i></i>
+                <span>MARCAUDIO</span>
+                <i></i>
+                <span>MCLELLAND</span>
+                <i></i>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
     <!-- =========================================
          FOOTER
     ========================================== -->
@@ -539,8 +320,8 @@
                 <span>Explore</span>
 
                 <a href="solutions.html">Solutions</a>
-                <a href="#projects">Projects</a>
-                <a href="#experience">Experience</a>
+                <a href="projects.html">Projects</a>
+                <a href="experience.html">Experience</a>
                 <a href="partner.html">Partners</a>
             </div>
 
@@ -554,9 +335,30 @@
 
             <div class="footer-column">
                 <span>Connect</span>
-
-                <a href="#">Instagram ↗</a>
-                <a href="#">LinkedIn ↗</a>
+            
+                <div class="footer-socials">
+            
+                    <a href="https://www.instagram.com/tis_eastafrica?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                        target="_blank" rel="noopener noreferrer" aria-label="TIS East Africa on Instagram">
+            
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <circle cx="17.5" cy="6.5" r="1"></circle>
+                        </svg>
+            
+                    </a>
+            
+                    <a href="https://www.facebook.com/p/TIS-East-Africa-100091730113954/" target="_blank" rel="noopener noreferrer"
+                        aria-label="TIS East Africa on Facebook">
+            
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M14 8h3V4h-3c-3 0-5 2-5 5v2H6v4h3v7h4v-7h3.5l.5-4h-4V9c0-.7.3-1 1-1z"></path>
+                        </svg>
+            
+                    </a>
+            
+                </div>
             </div>
 
         </div>
@@ -572,9 +374,8 @@
         </div>
 
     </footer>
-
-
-    <script src="../js/script.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/home.js"></script>
 
 </body>
 

@@ -10,109 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ===================================================== */
 
     const body = document.body;
-    const header = document.querySelector(".site-header");
     const menuButton = document.querySelector(".menu-button");
-
-    const systemButtons = document.querySelectorAll(".system");
-    const systemTitle = document.getElementById("system-title");
-    const systemDescription = document.getElementById("system-description");
-    const systemStatus = document.querySelector(".system-status");
-    const experienceBackground = document.querySelector(".experience-background");
-
-
-    /* =====================================================
-       INTERACTIVE TIS EXPERIENCE
-    ===================================================== */
-
-    const systems = {
-
-        lighting: {
-            number: "01",
-            title: "Lighting",
-            description:
-                "Set the atmosphere without thinking about it. One touch transforms the entire space.",
-            filter: "brightness(0.78) saturate(1.05)"
-        },
-
-        climate: {
-            number: "02",
-            title: "Climate",
-            description:
-                "Comfort that adjusts around you. Control temperature and climate throughout your space.",
-            filter: "brightness(0.92) saturate(0.85) hue-rotate(8deg)"
-        },
-
-        curtains: {
-            number: "03",
-            title: "Curtains",
-            description:
-                "Natural light, privacy and atmosphere move with you throughout the day.",
-            filter: "brightness(0.58) contrast(1.08)"
-        },
-
-        security: {
-            number: "04",
-            title: "Security",
-            description:
-                "See, control and protect your space from one intelligent system — wherever you are.",
-            filter: "brightness(0.65) saturate(0.7) contrast(1.15)"
-        },
-
-        entertainment: {
-            number: "05",
-            title: "Entertainment",
-            description:
-                "Music, television and home cinema become part of the architecture — not an afterthought.",
-            filter: "brightness(0.68) saturate(1.15)"
-        },
-
-        energy: {
-            number: "06",
-            title: "Energy",
-            description:
-                "Understand how your space consumes energy and manage it more intelligently.",
-            filter: "brightness(0.8) saturate(0.75)"
-        }
-
-    };
-
-
-    systemButtons.forEach(button => {
-
-        button.addEventListener("click", () => {
-
-            const systemName = button.dataset.system;
-            const selectedSystem = systems[systemName];
-
-            if (!selectedSystem) return;
-
-            systemButtons.forEach(item => {
-                item.classList.remove("active");
-            });
-
-            button.classList.add("active");
-
-            if (systemTitle) {
-                systemTitle.textContent = selectedSystem.title;
-            }
-
-            if (systemDescription) {
-                systemDescription.textContent = selectedSystem.description;
-            }
-
-            if (systemStatus) {
-                systemStatus.textContent =
-                    `SYSTEM / ${selectedSystem.number}`;
-            }
-
-            /* Keep original architectural image untouched */
-            if (experienceBackground) {
-                experienceBackground.style.filter = "";
-            }
-
-        });
-
-    });
 
 
     /* =====================================================
@@ -200,13 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     <i>↗</i>
                 </a>
 
-                <a href="index.html#projects">
+                <a href="projects.html">
                     <span>02</span>
                     <strong>Projects</strong>
                     <i>↗</i>
                 </a>
 
-                <a href="index.html#experience">
+                <a href="experience.html">
                     <span>03</span>
                     <strong>Experience</strong>
                     <i>↗</i>
