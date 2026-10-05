@@ -370,6 +370,10 @@
         opacity 180ms ease,
         transform 300ms ease;
 }
+.system-glass.is-changing {
+    opacity: 0;
+    transform: translateY(10px);
+}
 
 .system-image-label {
     display: block;

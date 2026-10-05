@@ -157,8 +157,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const capabilities =
         document.getElementById("system-capabilities");
 
-    const information =
-        document.querySelector(".system-glass");
 
     /* =====================================================
        CHANGE SYSTEM
@@ -183,88 +181,75 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
 
-        /* Fade content */
+        /* System information */
 
-        image?.classList.add("is-changing");
-        information?.classList.add("is-changing");
+        if (number) {
+            number.textContent = selected.number;
+        }
 
+        if (category) {
+            category.textContent = selected.category;
+        }
 
-        window.setTimeout(() => {
+        if (imageLabel) {
+            imageLabel.textContent = selected.category;
+        }
 
-            if (number) {
-                number.textContent = selected.number;
-            }
+        if (title) {
+            title.innerHTML = selected.title;
+        }
 
-            if (category) {
-                category.textContent = selected.category;
-            }
-
-            if (imageLabel) {
-                imageLabel.textContent = selected.category;
-            }
-
-            if (title) {
-                title.innerHTML = selected.title;
-            }
-
-            if (description) {
-                description.textContent = selected.description;
-            }
+        if (description) {
+            description.textContent = selected.description;
+        }
 
 
-            /* Capabilities */
+        /* Capabilities */
 
-            if (capabilities) {
+        if (capabilities) {
 
-                capabilities.innerHTML = "";
+            capabilities.innerHTML = "";
 
-                selected.capabilities.forEach(item => {
+            selected.capabilities.forEach(item => {
 
-                    const tag =
-                        document.createElement("span");
+                const tag = document.createElement("span");
 
-                    tag.textContent = item;
+                tag.textContent = item;
 
-                    capabilities.appendChild(tag);
+                capabilities.appendChild(tag);
 
-                });
+            });
 
-            }
-
-
-            /* Image */
-
-            if (image) {
-
-                image.style.backgroundImage = `
-                    linear-gradient(
-                        180deg,
-                        rgba(0, 0, 0, 0.03),
-                        rgba(0, 0, 0, 0.22)
-                    ),
-                    url("${selected.image}")
-                `;
-
-            }
+        }
 
 
-            image?.classList.remove("is-changing");
-            information?.classList.remove("is-changing");
+        /* Image */
+
+        if (image) {
+
+            image.style.backgroundImage = `
+                linear-gradient(
+                    180deg,
+                    rgba(0, 0, 0, 0.03),
+                    rgba(0, 0, 0, 0.22)
+                ),
+                url("${selected.image}")
+            `;
+
+        }
 
 
-            /* URL */
+        /* URL */
 
-            if (updateURL) {
+        if (updateURL) {
 
-                history.replaceState(
-                    null,
-                    "",
-                    `#${systemKey}`
-                );
+            history.replaceState(
+                null,
+                "",
+                `#${systemKey}`
+            );
 
-            }
-
-        }, 180);
+        }
 
     }
 
