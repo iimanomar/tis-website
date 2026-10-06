@@ -1271,8 +1271,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       MUSIC
-    ===================================================== */
+    MUSIC — REAL AUDIO
+ ===================================================== */
+
+    const demoAudio = new Audio("../audio/tis-demo-music.mp3");
+
+    demoAudio.preload = "auto";
+    demoAudio.loop = true;
+    demoAudio.volume = state.music.volume / 100;
+
 
     function updateMusic() {
 
@@ -1293,17 +1300,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
             track.textContent =
                 state.music.playing
-                    ? "Evening Sessions"
+                    ? "Digital Clouds"
                     : "Nothing playing";
+
         }
 
 
         if (play) {
 
-            play.textContent =
+            play.classList.toggle(
+                "playing",
                 state.music.playing
-                    ? "❚❚"
-                    : "▶";
+            );
+
+            play.setAttribute(
+                "aria-label",
+                state.music.playing
+                    ? "Pause music"
+                    : "Play music"
+            );
+
         }
 
 
@@ -1313,6 +1329,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 state.music.volume;
 
             paintRange(volume);
+
         }
 
 
@@ -1320,7 +1337,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             volumeValue.textContent =
                 `${state.music.volume}%`;
+
         }
+
+
+        demoAudio.volume =
+            state.music.volume / 100;
+
     }
 
 
@@ -1330,16 +1353,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (musicPlay) {
 
+        musicPlay.innerHTML =
+            '<span class="music-play-icon"></span>';
+
         musicPlay.addEventListener(
             "click",
-            () => {
+            async () => {
 
-                state.music.playing =
-                    !state.music.playing;
+                if (demoAudio.paused) {
+
+                    try {
+
+                        await demoAudio.play();
+
+                        state.music.playing = true;
+
+                    } catch (error) {
+
+                        console.error(
+                            "Music could not play:",
+                            error
+                        );
+
+                        state.music.playing = false;
+
+                    }
+
+                } else {
+
+                    demoAudio.pause();
+
+                    state.music.playing = false;
+
+                }
 
                 updateMusic();
+
             }
         );
+
     }
 
 
@@ -1358,12 +1410,53 @@ document.addEventListener("DOMContentLoaded", () => {
                         volumeSlider.value
                     );
 
+                demoAudio.volume =
+                    state.music.volume / 100;
+
                 updateMusic();
+
             }
         );
+
     }
 
 
+    demoAudio.addEventListener(
+        "play",
+        () => {
+
+            state.music.playing = true;
+            updateMusic();
+
+        }
+    );
+
+
+    demoAudio.addEventListener(
+        "pause",
+        () => {
+
+            state.music.playing = false;
+            updateMusic();
+
+        }
+    );
+
+
+    demoAudio.addEventListener(
+        "error",
+        () => {
+
+            state.music.playing = false;
+            updateMusic();
+
+            console.error(
+                "TIS demo music file could not be loaded."
+            );
+
+        }
+    );
+    
     /* =====================================================
        APPLIANCES
     ===================================================== */
@@ -1787,108 +1880,93 @@ document.addEventListener("DOMContentLoaded", () => {
                 activateMood(
                     button.dataset.mood
                 );
-            }
-        );
+            
+            });
 
     });
-
-
     /* =====================================================
-       CAMERAS
-    ===================================================== */
+   CAMERAS
+===================================================== */
 
-    const cameraMainImage =
-        $(".camera-main-image");
+    const cameraMainImage = $(".camera-main-image");
+    const cameraTitle = $(".camera-main > div:last-child strong");
+    const cameraNumber = $(".camera-main > div:last-child small");
 
-    const cameraTitle =
-        $(".camera-main > div:last-child strong");
+    const cameraFeeds = [
+        {
+            name: "Gate",
+            image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=500&q=75"
+        },
+        {
+            name: "Garden",
+            image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=500&q=75"
+        },
+        {
+            name: "Driveway",
+            image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=500&q=75"
+        },
+        {
+            name: "Rear",
+            image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=75"
+        }
+    ];
 
-    const cameraNumber =
-        $(".camera-main > div:last-child small");
+    $$(".camera-grid button").forEach((button, index) => {
 
+        button.addEventListener("click", () => {
 
-    $$(".camera-grid button").forEach(
-        (button, index) => {
+            const feed = cameraFeeds[index];
 
-            button.addEventListener(
-                "click",
-                () => {
+            if (!feed || !cameraMainImage) return;
 
-                    const thumb =
-                        $(".camera-thumb", button);
+            /* Change the actual main camera image */
+            cameraMainImage.style.backgroundImage =
+                `url("${feed.image}")`;
 
-                    const name =
-                        $("span", button);
+            cameraMainImage.style.backgroundSize = "cover";
+            cameraMainImage.style.backgroundPosition = "center center";
+            cameraMainImage.style.backgroundRepeat = "no-repeat";
 
+            /* Update camera name */
+            if (cameraTitle) {
+                cameraTitle.textContent = feed.name;
+            }
 
-                    if (
-                        !thumb ||
-                        !cameraMainImage
-                    ) {
-                        return;
+            /* Update camera number */
+            if (cameraNumber) {
+                cameraNumber.textContent =
+                    `Camera ${String(index + 1).padStart(2, "0")}`;
+            }
+
+            /* Selected thumbnail */
+            $$(".camera-grid button").forEach(item => {
+                item.classList.remove("active");
+            });
+
+            button.classList.add("active");
+
+            /* Small transition */
+            cameraMainImage.animate(
+                [
+                    {
+                        opacity: 0.45,
+                        transform: "scale(1.025)"
+                    },
+                    {
+                        opacity: 1,
+                        transform: "scale(1)"
                     }
-
-
-                    const style =
-                        window.getComputedStyle(
-                            thumb
-                        );
-
-
-                    cameraMainImage.style.backgroundImage =
-                        style.backgroundImage;
-
-                    cameraMainImage.style.backgroundPosition =
-                        style.backgroundPosition;
-
-                    cameraMainImage.style.backgroundSize =
-                        "cover";
-
-
-                    if (
-                        cameraTitle &&
-                        name
-                    ) {
-
-                        cameraTitle.textContent =
-                            name.textContent;
-                    }
-
-
-                    if (cameraNumber) {
-
-                        cameraNumber.textContent =
-                            `Camera ${String(
-                                index + 1
-                            ).padStart(2, "0")}`;
-                    }
-
-
-                    cameraMainImage.animate(
-                        [
-                            {
-                                opacity: 0.45,
-                                transform:
-                                    "scale(1.025)"
-                            },
-                            {
-                                opacity: 1,
-                                transform:
-                                    "scale(1)"
-                            }
-                        ],
-                        {
-                            duration: 350,
-                            easing: "ease-out"
-                        }
-                    );
+                ],
+                {
+                    duration: 350,
+                    easing: "ease-out"
                 }
             );
 
-        }
-    );
+        });
 
-
+    });
+    
     /* =====================================================
        GENERIC DEVICE FEEDBACK
        Makes currently-static Intercom / Gate /

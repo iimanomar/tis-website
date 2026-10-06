@@ -862,4 +862,7 @@ body.tis-demo-open .floating-nav {
     border: 0;
 
     background: #111;
+}/* Remove TIS text from mini Try TIS phone */
+.tis-demo-trigger-screen strong {
+    display: none;
 }

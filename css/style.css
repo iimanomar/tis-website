@@ -1673,4 +1673,64 @@ body.menu-open .menu-links a:nth-child(5) {
         margin-top: 30px;
     }
 
+}/* =========================================================
+   GLOBAL CLEAN ARROWS
+   Replaces font / emoji-style diagonal arrows
+========================================================= */
+
+.nav-contact span,
+.text-link span,
+.menu-links i,
+.menu-contact>a span,
+.footer-location-link i {
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+/* diagonal arrow line */
+
+.nav-contact span::before,
+.text-link span::before,
+.menu-links i::before,
+.menu-contact>a span::before,
+.footer-location-link i::before {
+    content: "";
+    position: absolute;
+
+    width: 11px;
+    height: 1px;
+
+    top: 50%;
+    left: 50%;
+
+    background: currentColor;
+
+    transform:
+        translate(-50%, -50%) rotate(-45deg);
+
+    transform-origin: center;
+}
+
+/* arrow head */
+
+.nav-contact span::after,
+.text-link span::after,
+.menu-links i::after,
+.menu-contact>a span::after,
+.footer-location-link i::after {
+    content: "";
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    top: 0;
+    right: 0;
+
+    border-top: 1px solid currentColor;
+    border-right: 1px solid currentColor;
 }
