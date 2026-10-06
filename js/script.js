@@ -48,6 +48,37 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
 
     body.appendChild(floatingNav);
+    /* =====================================================
+   GLOBAL TRY TIS EXPERIENCE TRIGGER
+===================================================== */
+
+    const tisDemoTrigger = document.createElement("button");
+
+    tisDemoTrigger.className = "tis-demo-trigger";
+    tisDemoTrigger.type = "button";
+
+    tisDemoTrigger.setAttribute(
+        "aria-label",
+        "Try the TIS interactive experience"
+    );
+
+    tisDemoTrigger.innerHTML = `
+    <span class="tis-demo-trigger-label">
+        <span>Interactive demo</span>
+        <strong>Try TIS</strong>
+    </span>
+
+    <span
+        class="tis-demo-trigger-phone"
+        aria-hidden="true"
+    >
+        <span class="tis-demo-trigger-screen">
+            <strong>TIS</strong>
+        </span>
+    </span>
+`;
+
+    body.appendChild(tisDemoTrigger);
 
 
     /* =====================================================
@@ -104,11 +135,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     <i>↗</i>
                 </a>
 
-                <a href="experience.html">
-                    <span>03</span>
-                    <strong>Experience</strong>
-                    <i>↗</i>
-                </a>
 
                 <a href="partner.html">
                     <span>04</span>
@@ -149,7 +175,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <div class="menu-socials">
                 <a href="#">Instagram</a>
-                <a href="#">LinkedIn</a>
                 <a href="#">Facebook</a>
             </div>
 

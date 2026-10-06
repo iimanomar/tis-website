@@ -1,0 +1,443 @@
+/* =========================================================
+   TIS EAST AFRICA
+   PROJECTS
+========================================================= */
+
+.projects-page {
+    background: #f5f4f0;
+}
+
+
+/* =========================================================
+   HEADER — LIGHT PAGE
+========================================================= */
+
+.projects-page .site-header {
+    color: #111;
+}
+
+.projects-page .desktop-nav a,
+.projects-page .nav-contact {
+    color: #111;
+}
+
+.projects-page .menu-button span {
+    background: #111;
+}
+
+
+/* =========================================================
+   PROJECT GALLERY
+========================================================= */
+
+.projects-gallery {
+    padding:
+        115px clamp(24px, 4vw, 60px) 28px;
+
+    background: #f5f4f0;
+    color: #111;
+}
+
+
+/* =========================================================
+   PROJECT
+========================================================= */
+
+.gallery-project {
+    min-width: 0;
+    margin: 0;
+}
+
+
+/* Wide projects after another gallery block */
+
+.gallery-pair+.gallery-project {
+    margin-top: 24px;
+}
+
+
+/* =========================================================
+   TWO-COLUMN GALLERY
+========================================================= */
+
+.gallery-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin-top: 24px;
+}
+
+.gallery-pair .gallery-project {
+    min-width: 0;
+    margin: 0;
+}
+
+
+/* =========================================================
+   PROJECT NAME
+========================================================= */
+
+.project-heading {
+    display: flex;
+    align-items: center;
+
+    min-height: 30px;
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.project-heading h2 {
+    margin: 0;
+
+    font-family: var(--sans);
+    font-size: 0.64rem;
+    font-weight: 500;
+    line-height: 1;
+
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+
+    color: #111;
+}
+
+
+/* =========================================================
+   PHOTOGRAPH
+========================================================= */
+
+.project-photo {
+    position: relative;
+
+    width: 100%;
+    height: clamp(470px, 55vw, 720px);
+
+    margin-top: 7px;
+
+    overflow: hidden;
+
+    border-radius: 3px;
+
+    background: #ddd;
+
+    isolation: isolate;
+}
+
+.project-photo img {
+    position: relative;
+    z-index: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transform: scale(1.001);
+
+    transition:
+        transform 900ms cubic-bezier(.2, .7, .2, 1);
+}
+
+
+/* Gentle hover */
+
+.gallery-project:hover .project-photo img {
+    transform: scale(1.018);
+}
+
+
+/* =========================================================
+   LOCATION — INSIDE IMAGE
+========================================================= */
+
+.project-location {
+    position: absolute;
+    z-index: 2;
+
+    top: 18px;
+    left: 18px;
+
+    font-family: var(--sans);
+
+    font-size: 0.54rem;
+    font-weight: 500;
+    line-height: 1;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: #fff;
+
+    text-shadow:
+        0 1px 10px rgba(0, 0, 0, 0.28);
+}
+
+
+/* =========================================================
+   WIDE PROJECTS
+========================================================= */
+
+.gallery-project-wide {
+    width: 100%;
+}
+
+.project-photo-feature {
+    height: clamp(520px, 57vw, 760px);
+}
+
+.project-photo-landscape {
+    height: clamp(430px, 48vw, 650px);
+}
+
+
+/* =========================================================
+   PAIRED PROJECTS
+========================================================= */
+
+.project-photo-tall {
+    height: clamp(500px, 53vw, 720px);
+}
+
+.project-photo-square {
+    height: clamp(470px, 48vw, 660px);
+}
+
+
+/* =========================================================
+   IMAGE CROPS
+========================================================= */
+
+.gallery-pair:nth-of-type(2) .gallery-project:first-child .project-photo img {
+    object-position: center 55%;
+}
+
+.gallery-pair:nth-of-type(2) .gallery-project:last-child .project-photo img {
+    object-position: center;
+}
+
+.project-photo-landscape img {
+    object-position: center 52%;
+}
+
+
+/* =========================================================
+   GALLERY END
+========================================================= */
+
+.gallery-end {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-top: 24px;
+    padding-top: 12px;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+
+    font-family: var(--sans);
+
+    font-size: 0.57rem;
+    font-weight: 500;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.gallery-end>span {
+    color: #777;
+}
+
+
+/* =========================================================
+   END LINK
+========================================================= */
+
+.gallery-end a {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 24px;
+
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.38);
+
+    color: #111;
+
+    text-decoration: none;
+
+    transition:
+        border-color 220ms ease;
+}
+
+.gallery-end a>span {
+    display: inline-block;
+
+    transition:
+        color 220ms ease,
+        transform 220ms ease;
+}
+
+.gallery-end a:hover {
+    border-color: var(--red);
+}
+
+.gallery-end a:hover>span {
+    color: var(--red);
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .projects-gallery {
+        padding:
+            105px 28px 26px;
+    }
+
+    .gallery-pair {
+        margin-top: 20px;
+    }
+
+    .gallery-pair+.gallery-project {
+        margin-top: 20px;
+    }
+
+    .project-photo-feature {
+        height: 620px;
+    }
+
+    .project-photo-tall {
+        height: 560px;
+    }
+
+    .gallery-end {
+        margin-top: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .projects-gallery {
+        padding:
+            95px 20px 22px;
+    }
+
+
+    /* -----------------------------------------
+       ONE PROJECT PER ROW
+    ------------------------------------------ */
+
+    .gallery-pair {
+        display: block;
+        margin-top: 18px;
+    }
+
+    .gallery-pair+.gallery-project {
+        margin-top: 18px;
+    }
+
+    .gallery-pair .gallery-project {
+        margin: 0;
+    }
+
+    .gallery-pair .gallery-project+.gallery-project {
+        margin-top: 18px;
+    }
+
+
+    /* -----------------------------------------
+       PROJECT NAME
+    ------------------------------------------ */
+
+    .project-heading {
+        min-height: 27px;
+        padding-bottom: 7px;
+    }
+
+    .project-heading h2 {
+        font-size: 0.56rem;
+        letter-spacing: 0.1em;
+    }
+
+
+    /* -----------------------------------------
+       IMAGES
+    ------------------------------------------ */
+
+    .project-photo,
+    .project-photo-feature,
+    .project-photo-tall,
+    .project-photo-landscape,
+    .project-photo-square {
+        height: 58svh;
+
+        min-height: 410px;
+        max-height: 560px;
+
+        margin-top: 6px;
+
+        border-radius: 2px;
+    }
+
+
+    /* -----------------------------------------
+       LOCATION
+    ------------------------------------------ */
+
+    .project-location {
+        top: 14px;
+        left: 14px;
+
+        font-size: 0.48rem;
+    }
+
+
+    /* -----------------------------------------
+       GALLERY END
+    ------------------------------------------ */
+
+    .gallery-end {
+        margin-top: 18px;
+        padding-top: 10px;
+
+        gap: 20px;
+
+        font-size: 0.48rem;
+    }
+
+    .gallery-end a {
+        gap: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .project-photo img {
+        transition: none;
+    }
+
+}

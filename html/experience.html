@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Experience TIS intelligent home control — lighting, climate, curtains, security, entertainment, energy and more from one connected interface.">
+
+    <title>Experience — TIS East Africa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/experience.css">
+</head>
+
+
+<body class="experience-page">
+
+
+    <!-- =====================================================
+         GLOBAL NAVIGATION
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <a href="index.html" class="brand" aria-label="TIS East Africa home">
+            <img src="../images/TIS-Logo.png" alt="TIS">
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+            <a href="solutions.html">Solutions</a>
+            <a href="projects.html">Projects</a>
+            <a href="experience.html">Experience</a>
+            <a href="partner.html">Partners</a>
+            <a href="about.html">About</a>
+        </nav>
+
+        <a href="contact.html" class="nav-contact">
+            Start a project
+            <span>↗</span>
+        </a>
+
+        <button class="menu-button" aria-label="Open menu">
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- =====================================================
+             INTERACTIVE TIS EXPERIENCE
+        ====================================================== -->
+
+        <section class="tis-experience">
+
+
+            <!-- TOP LABEL -->
+
+            <div class="experience-topline">
+
+                <span>
+                    Interactive TIS Experience
+                </span>
+
+                <span>
+                    Select a room · Control a device · Try a mood
+                </span>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 EXPERIENCE STAGE
+            ================================================== -->
+
+            <div class="experience-stage">
+
+
+                <!-- =================================================
+                     REACTIVE ROOM
+                ================================================== -->
+
+                <div class="demo-room" id="demo-room">
+
+                    <div class="demo-room-image"></div>
+
+                    <div class="demo-room-light" id="demo-room-light"></div>
+
+                    <div class="demo-room-night" id="demo-room-night"></div>
+
+
+                    <!-- CURTAIN VISUAL -->
+
+                    <div class="demo-curtains" id="demo-curtains">
+
+                        <div class="demo-curtain demo-curtain-left"></div>
+
+                        <div class="demo-curtain demo-curtain-right"></div>
+
+                    </div>
+
+
+                    <!-- ROOM INFORMATION -->
+
+                    <div class="demo-room-top">
+
+                        <span class="live-indicator">
+                            <i></i>
+                            Live simulation
+                        </span>
+                    </div>
+
+
+                    <div class="demo-room-bottom">
+
+                        <div>
+
+                            <span>
+                                Current room
+                            </span>
+
+                            <strong id="demo-room-name">
+                                Living Room
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- =================================================
+                     TIS PHONE
+                ================================================== -->
+
+                <div class="phone-wrap">
+
+                    <div class="tis-phone">
+
+
+                        <!-- HARDWARE -->
+
+                        <div class="phone-speaker"></div>
+
+                        <div class="phone-camera"></div>
+
+
+                        <!-- SCREEN -->
+
+                        <div class="phone-screen">
+
+
+                            <!-- =====================================
+                                 STATUS BAR
+                            ====================================== -->
+
+                            <div class="app-status-bar">
+
+                                <span id="app-time">
+                                    11:32
+                                </span>
+
+                                <div>
+                                    <span>●</span>
+                                    <span class="wifi-icon" aria-label="WiFi connected">
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                    </span>
+                                    <span>100%</span>
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- =====================================
+                                 APP HEADER
+                            ====================================== -->
+
+                            <div class="app-header">
+
+                                <button class="app-home-button" id="app-home-button" type="button"
+                                    aria-label="Return to dashboard">
+
+                                    <span>⌂</span>
+                                    <span>My Home</span>
+
+                                </button>
+
+
+                                <strong class="app-logo">
+                                    TIS
+                                </strong>
+
+
+                                <div class="app-header-actions">
+
+                                    <button type="button" aria-label="Notifications">
+                                        ◌
+                                    </button>
+
+                                    <button type="button" aria-label="Settings">
+                                        ⚙
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- =====================================
+                                 APP VIEWPORT
+                            ====================================== -->
+
+                            <div class="app-viewport">
+
+
+                                <!-- =================================
+                                     HOME DASHBOARD
+                                ================================== -->
+
+                                <section class="app-view active" id="view-home" data-view="home">
+
+
+                                    <!-- HOME STATUS -->
+
+                                    <div class="home-status">
+
+                                        <div>
+
+                                            <strong id="dashboard-time">
+                                                11:32
+                                            </strong>
+
+                                            <span>
+                                                Nairobi
+                                            </span>
+
+                                        </div>
+
+
+                                        <div class="weather-status">
+
+                                            <span class="weather-icon">
+                                                ☀
+                                            </span>
+
+                                            <div>
+                                                <strong>24°</strong>
+                                                <span>Clear</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- FEATURED ROOM -->
+
+                                    <button class="featured-room" type="button" data-open-room="living">
+
+                                        <div class="featured-room-image"></div>
+
+                                        <div class="featured-room-shade"></div>
+
+                                        <div class="featured-room-copy">
+
+                                            <span>
+                                                Current room
+                                            </span>
+
+                                            <strong>
+                                                Living Room
+                                            </strong>
+
+                                        </div>
+
+                                        <span class="featured-room-arrow">
+                                            ↗
+                                        </span>
+
+                                    </button>
+
+
+
+                                    <!-- MAIN FUNCTIONS -->
+
+                                    <div class="dashboard-grid">
+
+
+                                        <button class="dashboard-tile" type="button" data-open-view="rooms">
+
+                                            <span class="dashboard-icon">
+                                                ▦
+                                            </span>
+
+                                            <strong>
+                                                Rooms
+                                            </strong>
+
+                                            <small>
+                                                5 spaces
+                                            </small>
+
+                                        </button>
+
+
+                                        <button class="dashboard-tile" type="button" data-open-view="moods">
+
+                                            <span class="dashboard-icon">
+                                                ◉
+                                            </span>
+
+                                            <strong>
+                                                Moods
+                                            </strong>
+
+                                            <small id="dashboard-mood">
+                                                Welcome
+                                            </small>
+
+                                        </button>
+
+
+                                        <button class="dashboard-tile" type="button" data-open-view="security">
+
+                                            <span class="dashboard-icon">
+                                                ◇
+                                            </span>
+
+                                            <strong>
+                                                Security
+                                            </strong>
+
+                                            <small id="dashboard-security">
+                                                Disarmed
+                                            </small>
+
+                                        </button>
+
+
+                                        <button class="dashboard-tile" type="button" data-open-view="energy">
+
+                                            <span class="dashboard-icon">
+                                                ⌁
+                                            </span>
+
+                                            <strong>
+                                                Energy
+                                            </strong>
+
+                                            <small>
+                                                4.8 kW
+                                            </small>
+
+                                        </button>
+
+
+                                        <button class="dashboard-tile" type="button" data-open-view="devices">
+
+                                            <span class="dashboard-icon">
+                                                ◫
+                                            </span>
+
+                                            <strong>
+                                                All Devices
+                                            </strong>
+
+                                            <small>
+                                                24 online
+                                            </small>
+
+                                        </button>
+
+
+                                        <button class="dashboard-tile" type="button" data-open-view="health">
+
+                                            <span class="dashboard-icon">
+                                                ♥
+                                            </span>
+
+                                            <strong>
+                                                Health
+                                            </strong>
+
+                                            <small>
+                                                All systems
+                                            </small>
+
+                                        </button>
+
+                                    </div>
+
+
+
+                                    <!-- CAMERA -->
+
+                                    <button class="camera-preview" type="button" data-open-view="camera">
+
+                                        <div class="camera-preview-image"></div>
+
+                                        <div class="camera-preview-shade"></div>
+
+                                        <span class="camera-live">
+                                            <i></i>
+                                            Live
+                                        </span>
+
+                                        <div>
+                                            <span>
+                                                Camera
+                                            </span>
+
+                                            <strong>
+                                                Front Entrance
+                                            </strong>
+                                        </div>
+
+                                        <span>
+                                            ↗
+                                        </span>
+
+                                    </button>
+
+                                </section>
+
+
+
+                                <!-- =================================
+                                     ROOMS
+                                ================================== -->
+
+                                <section class="app-view" id="view-rooms" data-view="rooms">
+
+                                    <div class="app-view-heading">
+
+                                        <div>
+                                            <span>My Home</span>
+                                            <h2>Rooms</h2>
+                                        </div>
+
+                                        <span>
+                                            05
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="room-list">
+
+                                        <button class="room-card" type="button" data-open-room="living">
+
+                                            <div class="room-card-image room-living"></div>
+
+                                            <span>Living Room</span>
+
+                                            <small>
+                                                8 devices
+                                            </small>
+
+                                        </button>
+
+
+                                        <button class="room-card" type="button" data-open-room="master">
+
+                                            <div class="room-card-image room-master"></div>
+
+                                            <span>Master Bedroom</span>
+
+                                            <small>
+                                                6 devices
+                                            </small>
+
+                                        </button>
+
+
+                                        <button class="room-card" type="button" data-open-room="kitchen">
+
+                                            <div class="room-card-image room-kitchen"></div>
+
+                                            <span>Kitchen</span>
+
+                                            <small>
+                                                5 devices
+                                            </small>
+
+                                        </button>
+
+
+                                        <button class="room-card" type="button" data-open-room="cinema">
+
+                                            <div class="room-card-image room-cinema"></div>
+
+                                            <span>Home Cinema</span>
+
+                                            <small>
+                                                7 devices
+                                            </small>
+
+                                        </button>
+
+
+                                        <button class="room-card" type="button" data-open-room="garden">
+
+                                            <div class="room-card-image room-garden"></div>
+
+                                            <span>Garden</span>
+
+                                            <small>
+                                                4 devices
+                                            </small>
+
+                                        </button>
+
+                                    </div>
+
+                                </section>
+
+
+
+                                <!-- =================================
+                                     ROOM CONTROL
+                                ================================== -->
+
+                                <section class="app-view" id="view-room" data-view="room">
+
+                                    <div class="room-control-image">
+
+                                        <div class="room-control-photo" id="room-control-photo">
+                                        </div>
+
+                                        <div class="room-control-shade"></div>
+
+                                        <button class="app-back-button" type="button" data-back="rooms">
+                                            ←
+                                        </button>
+
+                                        <div class="room-control-title">
+
+                                            <span>
+                                                Room
+                                            </span>
+
+                                            <strong id="room-control-name">
+                                                Living Room
+                                            </strong>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- ROOM SYSTEM TABS -->
+
+                                    <div class="room-system-tabs">
+
+                                        <button class="room-system-tab active" type="button" data-system="lights">
+
+                                            Lights
+
+                                        </button>
+
+                                        <button class="room-system-tab" type="button" data-system="climate">
+
+                                            AC
+
+                                        </button>
+
+                                        <button class="room-system-tab" type="button" data-system="curtains">
+
+                                            Curtains
+
+                                        </button>
+
+                                        <button class="room-system-tab" type="button" data-system="music">
+
+                                            Music
+
+                                        </button>
+
+                                        <button class="room-system-tab" type="button" data-system="appliances">
+
+                                            Devices
+
+                                        </button>
+
+                                    </div>
+
+
+
+                                    <!-- LIGHTS -->
+
+                                    <div class="room-system-panel active" data-system-panel="lights">
+
+                                        <div class="system-panel-heading">
+
+                                            <span>
+                                                Lighting
+                                            </span>
+
+                                            <button id="all-lights-toggle" type="button">
+
+                                                All off
+
+                                            </button>
+
+                                        </div>
+
+
+                                        <div class="device-list">
+
+
+                                            <div class="device-control">
+
+                                                <div class="device-control-top">
+
+                                                    <div>
+                                                        <span class="device-symbol">
+                                                            ◉
+                                                        </span>
+
+                                                        <div>
+                                                            <strong>
+                                                                Ceiling Lights
+                                                            </strong>
+
+                                                            <small id="ceiling-status">
+                                                                On · 72%
+                                                            </small>
+                                                        </div>
+                                                    </div>
+
+                                                    <button class="device-switch active" type="button"
+                                                        data-light-switch="ceiling">
+
+                                                        <span></span>
+
+                                                    </button>
+
+                                                </div>
+
+
+                                                <input class="device-slider" id="ceiling-slider"
+                                                    data-light-slider="ceiling" type="range" min="0" max="100"
+                                                    value="72">
+
+                                            </div>
+
+
+
+                                            <div class="device-control">
+
+                                                <div class="device-control-top">
+
+                                                    <div>
+                                                        <span class="device-symbol">
+                                                            ◌
+                                                        </span>
+
+                                                        <div>
+                                                            <strong>
+                                                                Chandelier
+                                                            </strong>
+
+                                                            <small id="chandelier-status">
+                                                                On · 55%
+                                                            </small>
+                                                        </div>
+                                                    </div>
+
+                                                    <button class="device-switch active" type="button"
+                                                        data-light-switch="chandelier">
+
+                                                        <span></span>
+
+                                                    </button>
+
+                                                </div>
+
+
+                                                <input class="device-slider" id="chandelier-slider"
+                                                    data-light-slider="chandelier" type="range" min="0" max="100"
+                                                    value="55">
+
+                                            </div>
+
+
+
+                                            <div class="device-control">
+
+                                                <div class="device-control-top">
+
+                                                    <div>
+                                                        <span class="device-symbol">
+                                                            ✦
+                                                        </span>
+
+                                                        <div>
+                                                            <strong>
+                                                                Wall Lights
+                                                            </strong>
+
+                                                            <small id="wall-status">
+                                                                On · 40%
+                                                            </small>
+                                                        </div>
+                                                    </div>
+
+                                                    <button class="device-switch active" type="button"
+                                                        data-light-switch="wall">
+
+                                                        <span></span>
+
+                                                    </button>
+
+                                                </div>
+
+
+                                                <input class="device-slider" id="wall-slider" data-light-slider="wall"
+                                                    type="range" min="0" max="100" value="40">
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- CLIMATE -->
+
+                                    <div class="room-system-panel" data-system-panel="climate">
+
+                                        <div class="climate-display">
+
+                                            <span>
+                                                Room temperature
+                                            </span>
+
+                                            <strong id="climate-temperature">
+                                                22°
+                                            </strong>
+
+                                            <small>
+                                                Cooling
+                                            </small>
+
+                                        </div>
+
+
+                                        <div class="temperature-buttons">
+
+                                            <button id="climate-down" type="button">
+                                                −
+                                            </button>
+
+                                            <button id="climate-power" class="active" type="button">
+                                                Power
+                                            </button>
+
+                                            <button id="climate-up" type="button">
+                                                +
+                                            </button>
+
+                                        </div>
+
+
+                                        <div class="fan-control">
+
+                                            <span>
+                                                Fan speed
+                                            </span>
+
+                                            <div>
+
+                                                <button class="fan-button" type="button" data-fan="1">
+                                                    1
+                                                </button>
+
+                                                <button class="fan-button active" type="button" data-fan="2">
+                                                    2
+                                                </button>
+
+                                                <button class="fan-button" type="button" data-fan="3">
+                                                    3
+                                                </button>
+
+                                                <button class="fan-button" type="button" data-fan="auto">
+                                                    Auto
+                                                </button>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- CURTAINS -->
+
+                                    <div class="room-system-panel" data-system-panel="curtains">
+
+                                        <div class="curtain-control">
+
+                                            <div>
+
+                                                <span>
+                                                    Main Curtains
+                                                </span>
+
+                                                <strong id="curtain-position">
+                                                    100%
+                                                </strong>
+
+                                                <small id="curtain-state">
+                                                    Open
+                                                </small>
+
+                                            </div>
+
+
+                                            <input id="curtain-slider" type="range" min="0" max="100" value="100">
+
+
+                                            <div class="curtain-buttons">
+
+                                                <button id="curtain-open" type="button">
+                                                    Open
+                                                </button>
+
+                                                <button id="curtain-stop" type="button">
+                                                    Stop
+                                                </button>
+
+                                                <button id="curtain-close" type="button">
+                                                    Close
+                                                </button>
+
+                                            </div>
+
+                                        </div>
+
+
+
+                                        <div class="curtain-control secondary">
+
+                                            <div>
+
+                                                <span>
+                                                    Sheers
+                                                </span>
+
+                                                <strong id="sheer-position">
+                                                    100%
+                                                </strong>
+
+                                                <small>
+                                                    Open
+                                                </small>
+
+                                            </div>
+
+
+                                            <input id="sheer-slider" type="range" min="0" max="100" value="100">
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- MUSIC -->
+
+                                    <div class="room-system-panel" data-system-panel="music">
+
+                                        <div class="music-now-playing">
+
+                                            <div class="album-art">
+                                                ♪
+                                            </div>
+
+                                            <div>
+
+                                                <span>
+                                                    Now playing
+                                                </span>
+
+                                                <strong id="music-track">
+                                                    Nothing playing
+                                                </strong>
+
+                                                <small>
+                                                    Living Room
+                                                </small>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="music-controls">
+
+                                            <button type="button">
+                                                ‹
+                                            </button>
+
+                                            <button id="music-play" type="button">
+                                                ▶
+                                            </button>
+
+                                            <button type="button">
+                                                ›
+                                            </button>
+
+                                        </div>
+
+
+                                        <div class="volume-control">
+
+                                            <span>
+                                                Volume
+                                            </span>
+
+                                            <input id="volume-slider" type="range" min="0" max="100" value="35">
+
+                                            <strong id="volume-value">
+                                                35%
+                                            </strong>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- APPLIANCES -->
+
+                                    <div class="room-system-panel" data-system-panel="appliances">
+
+                                        <div class="appliance-grid">
+
+
+                                            <button class="appliance-tile" type="button" data-appliance="tv">
+
+                                                <span>
+                                                    ▣
+                                                </span>
+
+                                                <strong>
+                                                    Television
+                                                </strong>
+
+                                                <small id="tv-status">
+                                                    Off
+                                                </small>
+
+                                            </button>
+
+
+                                            <button class="appliance-tile" type="button" data-appliance="floor">
+
+                                                <span>
+                                                    ≋
+                                                </span>
+
+                                                <strong>
+                                                    Floor Heating
+                                                </strong>
+
+                                                <small id="floor-status">
+                                                    Off
+                                                </small>
+
+                                            </button>
+
+
+                                            <button class="appliance-tile" type="button" data-appliance="socket">
+
+                                                <span>
+                                                    ◉
+                                                </span>
+
+                                                <strong>
+                                                    Smart Socket
+                                                </strong>
+
+                                                <small id="socket-status">
+                                                    On
+                                                </small>
+
+                                            </button>
+
+
+                                            <button class="appliance-tile" type="button" data-appliance="projector">
+
+                                                <span>
+                                                    ▰
+                                                </span>
+
+                                                <strong>
+                                                    Projector
+                                                </strong>
+
+                                                <small id="projector-status">
+                                                    Off
+                                                </small>
+
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+                                </section>
+
+
+
+                                <!-- =================================
+                                     MOODS
+                                ================================== -->
+
+                                <section class="app-view" id="view-moods" data-view="moods">
+
+                                    <div class="app-view-heading">
+
+                                        <div>
+                                            <span>Automation</span>
+                                            <h2>Moods</h2>
+                                        </div>
+
+                                        <span>
+                                            06
+                                        </span>
+
+                                    </div>
+
+
+                                    <p class="view-description">
+                                        One touch. Multiple systems respond together.
+                                    </p>
+
+
+                                    <div class="mood-list">
+
+
+                                        <button class="mood-card active" type="button" data-mood="welcome">
+
+                                            <span>01</span>
+
+                                            <div>
+                                                <strong>Welcome Home</strong>
+                                                <small>Lights · Climate · Curtains</small>
+                                            </div>
+
+                                            <i>↗</i>
+
+                                        </button>
+
+
+                                        <button class="mood-card" type="button" data-mood="morning">
+
+                                            <span>02</span>
+
+                                            <div>
+                                                <strong>Good Morning</strong>
+                                                <small>Curtains · Climate · Music</small>
+                                            </div>
+
+                                            <i>↗</i>
+
+                                        </button>
+
+
+                                        <button class="mood-card" type="button" data-mood="movie">
+
+                                            <span>03</span>
+
+                                            <div>
+                                                <strong>Movie Night</strong>
+                                                <small>Lighting · Curtains · TV · Climate</small>
+                                            </div>
+
+                                            <i>↗</i>
+
+                                        </button>
+
+
+                                        <button class="mood-card" type="button" data-mood="dinner">
+
+                                            <span>04</span>
+
+                                            <div>
+                                                <strong>Dinner</strong>
+                                                <small>Lighting · Music · Climate</small>
+                                            </div>
+
+                                            <i>↗</i>
+
+                                        </button>
+
+
+                                        <button class="mood-card" type="button" data-mood="sleep">
+
+                                            <span>05</span>
+
+                                            <div>
+                                                <strong>Good Night</strong>
+                                                <small>Lights · Curtains · Security</small>
+                                            </div>
+
+                                            <i>↗</i>
+
+                                        </button>
+
+
+                                        <button class="mood-card" type="button" data-mood="away">
+
+                                            <span>06</span>
+
+                                            <div>
+                                                <strong>Away</strong>
+                                                <small>Everything off · Security armed</small>
+                                            </div>
+
+                                            <i>↗</i>
+
+                                        </button>
+
+                                    </div>
+
+                                </section>
+
+
+
+                                <!-- =================================
+                                     SECURITY
+                                ================================== -->
+
+                                <section class="app-view" id="view-security" data-view="security">
+
+                                    <div class="app-view-heading">
+
+                                        <div>
+                                            <span>Protection</span>
+                                            <h2>Security</h2>
+                                        </div>
+
+                                        <span id="security-heading-state">
+                                            Off
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="security-state">
+
+                                        <div class="security-ring">
+
+                                            <span>
+                                                ◇
+                                            </span>
+
+                                        </div>
+
+                                        <strong id="security-main-state">
+                                            Disarmed
+                                        </strong>
+
+                                        <small>
+                                            All doors and windows monitored
+                                        </small>
+
+                                    </div>
+
+
+                                    <div class="security-actions">
+
+                                        <button type="button" data-security-mode="home">
+
+                                            Stay
+
+                                        </button>
+
+                                        <button type="button" data-security-mode="away">
+
+                                            Away
+
+                                        </button>
+
+                                        <button class="active" type="button" data-security-mode="off">
+
+                                            Disarm
+
+                                        </button>
+
+                                    </div>
+
+
+                                    <div class="security-devices">
+
+                                        <div>
+                                            <span>Front Door</span>
+                                            <strong id="front-door-state">
+                                                Locked
+                                            </strong>
+                                        </div>
+
+                                        <div>
+                                            <span>Garage</span>
+                                            <strong>
+                                                Closed
+                                            </strong>
+                                        </div>
+
+                                        <div>
+                                            <span>Motion</span>
+                                            <strong>
+                                                Clear
+                                            </strong>
+                                        </div>
+
+                                        <div>
+                                            <span>Windows</span>
+                                            <strong>
+                                                Closed
+                                            </strong>
+                                        </div>
+
+                                    </div>
+
+                                </section>
+
+
+
+                                <!-- =================================
+                                     ENERGY
+                                ================================== -->
+
+                                <section class="app-view" id="view-energy" data-view="energy">
+
+                                    <div class="app-view-heading">
+
+                                        <div>
+                                            <span>Monitoring</span>
+                                            <h2>Energy</h2>
+                                        </div>
+
+                                        <span>
+                                            Live
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="energy-main">
+
+                                        <span>
+                                            Current consumption
+                                        </span>
+
+                                        <strong>
+                                            4.8
+                                            <small>kW</small>
+                                        </strong>
+
+                                    </div>
+
+
+                                    <div class="energy-bars">
+
+                                        <div>
+                                            <span>Lighting</span>
+                                            <i style="--energy: 32%;"></i>
+                                            <strong>0.8 kW</strong>
+                                        </div>
+
+                                        <div>
+                                            <span>Climate</span>
+                                            <i style="--energy: 78%;"></i>
+                                            <strong>2.4 kW</strong>
+                                        </div>
+
+                                        <div>
+                                            <span>Entertainment</span>
+                                            <i style="--energy: 22%;"></i>
+                                            <strong>0.5 kW</strong>
+                                        </div>
+
+                                        <div>
+                                            <span>Other</span>
+                                            <i style="--energy: 42%;"></i>
+                                            <strong>1.1 kW</strong>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="energy-secondary">
+
+                                        <div>
+                                            <span>Solar</span>
+                                            <strong>2.1 kW</strong>
+                                            <small>Generating</small>
+                                        </div>
+
+                                        <div>
+                                            <span>Today</span>
+                                            <strong>18.4 kWh</strong>
+                                            <small>Consumed</small>
+                                        </div>
+
+                                    </div>
+
+                                </section>
+
+
+
+                                <!-- =================================
+                                     CAMERA
+                                ================================== -->
+
+                                <section class="app-view" id="view-camera" data-view="camera">
+
+                                    <div class="app-view-heading">
+
+                                        <div>
+                                            <span>Surveillance</span>
+                                            <h2>Cameras</h2>
+                                        </div>
+
+                                        <span>
+                                            04
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="camera-main">
+
+                                        <div class="camera-main-image"></div>
+
+                                        <span class="camera-live">
+                                            <i></i>
+                                            Live
+                                        </span>
+
+                                        <div>
+                                            <strong>
+                                                Front Entrance
+                                            </strong>
+
+                                            <small>
+                                                Camera 01
+                                            </small>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="camera-grid">
+
+                                        <button type="button">
+                                            <div class="camera-thumb camera-gate"></div>
+                                            <span>Gate</span>
+                                        </button>
+
+                                        <button type="button">
+                                            <div class="camera-thumb camera-garden"></div>
+                                            <span>Garden</span>
+                                        </button>
+
+                                        <button type="button">
+                                            <div class="camera-thumb camera-driveway"></div>
+                                            <span>Driveway</span>
+                                        </button>
+
+                                        <button type="button">
+                                            <div class="camera-thumb camera-rear"></div>
+                                            <span>Rear</span>
+                                        </button>
+
+                                    </div>
+
+                                </section>
+
+
+
+                                <!-- =================================
+                                     ALL DEVICES
+                                ================================== -->
+
+                                <section class="app-view" id="view-devices" data-view="devices">
+
+                                    <div class="app-view-heading">
+
+                                        <div>
+                                            <span>My Home</span>
+                                            <h2>All Devices</h2>
+                                        </div>
+
+                                        <span>
+                                            24
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="all-devices-grid">
+
+                                        <button type="button" data-open-system="lights">
+                                            <span>◉</span>
+                                            <strong>Lighting</strong>
+                                            <small>8 devices</small>
+                                        </button>
+
+                                        <button type="button" data-open-system="climate">
+                                            <span>°</span>
+                                            <strong>Climate</strong>
+                                            <small>4 zones</small>
+                                        </button>
+
+                                        <button type="button" data-open-system="curtains">
+                                            <span>║</span>
+                                            <strong>Curtains</strong>
+                                            <small>6 motors</small>
+                                        </button>
+
+                                        <button type="button" data-open-system="music">
+                                            <span>♪</span>
+                                            <strong>Audio</strong>
+                                            <small>4 zones</small>
+                                        </button>
+
+                                        <button type="button" data-open-view="security">
+                                            <span>◇</span>
+                                            <strong>Security</strong>
+                                            <small>Armed ready</small>
+                                        </button>
+
+                                        <button type="button" data-open-view="camera">
+                                            <span>●</span>
+                                            <strong>CCTV</strong>
+                                            <small>4 cameras</small>
+                                        </button>
+
+                                        <button type="button" data-appliance="tv">
+                                            <span>▣</span>
+                                            <strong>Television</strong>
+                                            <small>Living Room</small>
+                                        </button>
+
+                                        <button type="button">
+                                            <span>⌁</span>
+                                            <strong>Intercom</strong>
+                                            <small>Entrance</small>
+                                        </button>
+
+                                        <button type="button">
+                                            <span>⌂</span>
+                                            <strong>Gate</strong>
+                                            <small>Closed</small>
+                                        </button>
+
+                                        <button type="button">
+                                            <span>☼</span>
+                                            <strong>Garden</strong>
+                                            <small>Irrigation</small>
+                                        </button>
+
+                                        <button type="button">
+                                            <span>≈</span>
+                                            <strong>Pool</strong>
+                                            <small>27°C</small>
+                                        </button>
+
+                                        <button type="button" data-open-view="energy">
+                                            <span>↯</span>
+                                            <strong>Solar</strong>
+                                            <small>2.1 kW</small>
+                                        </button>
+
+                                    </div>
+
+                                </section>
+
+
+
+                                <!-- =================================
+                                     HEALTH
+                                ================================== -->
+
+                                <section class="app-view" id="view-health" data-view="health">
+
+                                    <div class="app-view-heading">
+
+                                        <div>
+                                            <span>System</span>
+                                            <h2>Health</h2>
+                                        </div>
+
+                                        <span>
+                                            Good
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="health-status">
+
+                                        <div class="health-mark">
+                                            ✓
+                                        </div>
+
+                                        <strong>
+                                            Everything looks good.
+                                        </strong>
+
+                                        <span>
+                                            24 devices connected
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="health-list">
+
+                                        <div>
+                                            <span>TIS Controller</span>
+                                            <strong>Online</strong>
+                                        </div>
+
+                                        <div>
+                                            <span>Network</span>
+                                            <strong>Connected</strong>
+                                        </div>
+
+                                        <div>
+                                            <span>Lighting Bus</span>
+                                            <strong>Online</strong>
+                                        </div>
+
+                                        <div>
+                                            <span>Climate</span>
+                                            <strong>Online</strong>
+                                        </div>
+
+                                        <div>
+                                            <span>Security</span>
+                                            <strong>Ready</strong>
+                                        </div>
+
+                                    </div>
+
+                                </section>
+
+
+                            </div>
+
+
+                            <!-- =====================================
+                                 APP BOTTOM NAV
+                            ====================================== -->
+
+                            <nav class="app-bottom-nav">
+
+                                <button class="active" type="button" data-bottom-view="home">
+
+                                    <span>⌂</span>
+                                    Home
+
+                                </button>
+
+
+                                <button type="button" data-bottom-view="rooms">
+
+                                    <span>▦</span>
+                                    Rooms
+
+                                </button>
+
+
+                                <button type="button" data-bottom-view="moods">
+
+                                    <span>◉</span>
+                                    Moods
+
+                                </button>
+
+
+                                <button type="button" data-bottom-view="devices">
+
+                                    <span>◫</span>
+                                    Devices
+
+                                </button>
+
+                            </nav>
+
+                        </div>
+
+
+                        <!-- PHONE HOME INDICATOR -->
+
+                        <div class="phone-home-indicator"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 EXPERIENCE FOOT
+            ================================================== -->
+
+            <div class="experience-foot">
+            
+                <a href="contact.html">
+            
+                    Experience TIS in person · Nairobi
+            
+                    <span>↗</span>
+            
+                </a>
+            
+            </div>
+        </section>
+
+
+
+        <!-- =====================================================
+             PARTNER MARQUEE
+        ====================================================== -->
+
+        <section class="partner-strip" aria-label="Technology partners">
+
+            <div class="marquee">
+
+                <div class="marquee-track">
+
+                    <div class="marquee-group">
+
+                        <span>TIS</span>
+                        <i></i>
+
+                        <span>DNAKE</span>
+                        <i></i>
+
+                        <span>MARCAUDIO</span>
+                        <i></i>
+
+                        <span>MCLELLAND</span>
+                        <i></i>
+
+                    </div>
+
+
+                    <div class="marquee-group" aria-hidden="true">
+
+                        <span>TIS</span>
+                        <i></i>
+
+                        <span>DNAKE</span>
+                        <i></i>
+
+                        <span>MARCAUDIO</span>
+                        <i></i>
+
+                        <span>MCLELLAND</span>
+                        <i></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         GLOBAL FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+
+                <img src="../images/TIS-Logo.png" alt="TIS">
+
+                <p>
+                    Intelligent spaces.<br>
+                    Designed for life.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <span>Explore</span>
+
+                <a href="solutions.html">
+                    Solutions
+                </a>
+
+                <a href="projects.html">
+                    Projects
+                </a>
+
+                <a href="experience.html">
+                    Experience
+                </a>
+
+                <a href="partner.html">
+                    Partners
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <span>Company</span>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="support.html">
+                    Support
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <span>Connect</span>
+
+                <div class="footer-socials">
+
+                    <a href="https://www.instagram.com/tis_eastafrica?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                        target="_blank" rel="noopener noreferrer" aria-label="TIS East Africa on Instagram">
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                            <rect x="3" y="3" width="18" height="18" rx="5">
+                            </rect>
+
+                            <circle cx="12" cy="12" r="4">
+                            </circle>
+
+                            <circle cx="17.5" cy="6.5" r="1">
+                            </circle>
+
+                        </svg>
+
+                    </a>
+
+
+                    <a href="https://www.facebook.com/p/TIS-East-Africa-100091730113954/" target="_blank"
+                        rel="noopener noreferrer" aria-label="TIS East Africa on Facebook">
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                            <path d="M14 8h3V4h-3c-3 0-5 2-5 5v2H6v4h3v7h4v-7h3.5l.5-4h-4V9c0-.7.3-1 1-1z">
+                            </path>
+
+                        </svg>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 TIS East Africa
+            </span>
+
+            <span>
+                Nairobi · Kenya
+            </span>
+
+            <a href="#">
+                Privacy
+            </a>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+
+    <script src="../js/script.js"></script>
+    <script src="../js/experience.js"></script>
+
+</body>
+
+</html>

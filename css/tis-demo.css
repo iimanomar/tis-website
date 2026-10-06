@@ -1,0 +1,865 @@
+/* =========================================================
+   TIS EAST AFRICA
+   GLOBAL INTERACTIVE EXPERIENCE TRIGGER
+========================================================= */
+
+
+/* =========================================================
+   FLOATING EXPERIENCE WRAPPER
+========================================================= */
+
+.tis-demo-trigger {
+    position: fixed;
+    right: 28px;
+    bottom: 28px;
+    z-index: 850;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    border: 0;
+    padding: 0;
+
+    background: transparent;
+    color: #ffffff;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================================================
+   TRY TIS BUBBLE
+========================================================= */
+
+.tis-demo-trigger-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 16px;
+
+    border: none;
+    border-radius: 999px;
+
+    background: #e31e24;
+
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.18);
+
+    transform: translateX(4px);
+
+    transition:
+        transform 0.35s cubic-bezier(.2, .7, .2, 1),
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Hide "Interactive demo" */
+
+.tis-demo-trigger-label span {
+    display: none;
+}
+
+
+.tis-demo-trigger-label strong {
+    margin: 0;
+
+    font-size: 0.64rem;
+    font-weight: 500;
+    line-height: 1;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+
+    color: #ffffff;
+}
+
+
+.tis-demo-trigger:hover .tis-demo-trigger-label {
+    transform: translateX(0);
+
+    background: #c9191f;
+
+    box-shadow:
+        0 13px 32px rgba(0, 0, 0, 0.22);
+}
+/* =========================================================
+   MINI PHONE
+========================================================= */
+
+.tis-demo-trigger-phone {
+    position: relative;
+
+    width: 48px;
+    height: 76px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 4px;
+
+    border-radius: 13px;
+
+    background: #090909;
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+
+    box-shadow:
+        0 16px 38px rgba(0, 0, 0, 0.24),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+
+    transition:
+        transform 0.4s cubic-bezier(.2, .7, .2, 1),
+        box-shadow 0.4s ease;
+}
+
+
+/* PHONE SPEAKER */
+
+.tis-demo-trigger-phone::before {
+    content: "";
+
+    position: absolute;
+
+    top: 6px;
+    left: 50%;
+
+    width: 12px;
+    height: 2px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.32);
+
+    transform: translateX(-50%);
+
+    z-index: 3;
+}
+
+
+/* PHONE SCREEN */
+
+.tis-demo-trigger-screen {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background:
+        radial-gradient(circle at 70% 25%,
+            rgba(227, 30, 36, 0.22),
+            transparent 34%),
+        linear-gradient(145deg,
+            #252525 0%,
+            #111111 55%,
+            #080808 100%);
+}
+
+
+/* TIS MARK */
+
+.tis-demo-trigger-screen strong {
+    position: relative;
+    z-index: 2;
+
+    font-size: 0.63rem;
+    font-weight: 600;
+
+    letter-spacing: -0.03em;
+
+    color: #ffffff;
+}
+
+
+/* RED STATUS DOT */
+
+.tis-demo-trigger-screen::before {
+    content: "";
+
+    position: absolute;
+
+    top: 10px;
+    right: 7px;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #e31e24;
+
+    box-shadow:
+        0 0 0 3px rgba(227, 30, 36, 0.10);
+}
+
+
+/* TINY UI LINES */
+
+.tis-demo-trigger-screen::after {
+    content: "";
+
+    position: absolute;
+
+    left: 7px;
+    right: 7px;
+    bottom: 9px;
+
+    height: 14px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.tis-demo-trigger:hover .tis-demo-trigger-phone {
+    transform:
+        translateY(-4px) rotate(-2deg);
+
+    box-shadow:
+        0 22px 50px rgba(0, 0, 0, 0.30),
+        0 0 0 1px rgba(227, 30, 36, 0.12);
+}
+
+
+.tis-demo-trigger:hover .tis-demo-trigger-label {
+    transform: translateX(0);
+
+    background: rgba(12, 12, 12, 0.88);
+
+    border-color: rgba(255, 255, 255, 0.22);
+}
+
+
+/* =========================================================
+   SUBTLE PHONE IDLE MOTION
+========================================================= */
+
+@keyframes tisDemoPhoneFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+
+}
+
+
+.tis-demo-trigger-phone {
+    animation:
+        tisDemoPhoneFloat 4.5s ease-in-out infinite;
+}
+
+
+.tis-demo-trigger:hover .tis-demo-trigger-phone {
+    animation-play-state: paused;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .tis-demo-trigger {
+        right: 18px;
+        bottom: 18px;
+        gap: 10px;
+    }
+
+
+    .tis-demo-trigger-phone {
+        width: 44px;
+        height: 70px;
+
+        border-radius: 12px;
+    }
+
+
+    .tis-demo-trigger-label {
+        padding: 9px 12px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .tis-demo-trigger {
+        right: 14px;
+        bottom: 14px;
+    }
+
+
+    /*
+       Phone remains visible.
+       Label becomes much quieter so it does not behave
+       like a large chat widget on small screens.
+    */
+
+    .tis-demo-trigger-label {
+        position: absolute;
+
+        right: 48px;
+        bottom: 8px;
+
+        width: max-content;
+
+        padding: 8px 10px;
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transform:
+            translateX(8px);
+
+        pointer-events: none;
+
+        transition:
+            opacity 0.3s ease,
+            transform 0.3s ease,
+            visibility 0.3s ease;
+    }
+
+
+    .tis-demo-trigger:hover .tis-demo-trigger-label,
+    .tis-demo-trigger:focus-visible .tis-demo-trigger-label {
+        opacity: 1;
+
+        visibility: visible;
+
+        transform:
+            translateX(0);
+    }
+
+
+    .tis-demo-trigger-phone {
+        width: 42px;
+        height: 66px;
+
+        border-radius: 11px;
+    }
+
+
+    .tis-demo-trigger-screen {
+        border-radius: 8px;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.tis-demo-trigger:focus-visible {
+    outline: none;
+}
+
+
+.tis-demo-trigger:focus-visible .tis-demo-trigger-phone {
+    box-shadow:
+        0 0 0 2px #e31e24,
+        0 16px 38px rgba(0, 0, 0, 0.24);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .tis-demo-trigger-phone {
+        animation: none;
+    }
+
+
+    .tis-demo-trigger,
+    .tis-demo-trigger-phone,
+    .tis-demo-trigger-label {
+        transition-duration: 0.01ms;
+    }
+
+}/* =========================================================
+   TIS EXPERIENCE — POPUP
+========================================================= */
+
+body.tis-demo-open {
+    overflow: hidden;
+}
+
+
+/* FULL SCREEN CONTAINER */
+
+.tis-demo-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 22px;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.4s ease,
+        visibility 0.4s ease;
+}
+
+
+.tis-demo-modal.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+/* BACKDROP */
+
+.tis-demo-backdrop {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.68);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    opacity: 0;
+
+    transition: opacity 0.45s ease;
+}
+
+
+.tis-demo-modal.open .tis-demo-backdrop {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   MAIN EXPERIENCE WINDOW
+========================================================= */
+
+.tis-demo-modal-panel {
+    position: relative;
+    z-index: 2;
+
+    width: min(1380px, calc(100vw - 44px));
+    height: min(820px, calc(100svh - 44px));
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background: #111111;
+    color: #ffffff;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.14);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 35px 100px rgba(0, 0, 0, 0.45);
+
+    transform:
+        translateY(22px) scale(0.975);
+
+    opacity: 0;
+
+    transition:
+        transform 0.55s cubic-bezier(.2, .8, .2, 1),
+        opacity 0.4s ease;
+}
+
+
+.tis-demo-modal.open .tis-demo-modal-panel {
+    transform:
+        translateY(0) scale(1);
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.tis-demo-modal-top {
+    position: relative;
+    z-index: 5;
+
+    height: 76px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 22px 0 26px;
+
+    background: #0c0c0c;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+.tis-demo-modal-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+.tis-demo-modal-title span {
+    font-size: 0.58rem;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+
+    color: rgba(255, 255, 255, 0.42);
+}
+
+
+.tis-demo-modal-title strong {
+    font-size: 0.72rem;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+
+    color: #ffffff;
+}
+
+
+.tis-demo-modal-title strong::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 5px;
+    height: 5px;
+
+    margin-right: 9px;
+
+    border-radius: 50%;
+
+    background: #e31e24;
+
+    vertical-align: 1px;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.tis-demo-close {
+    position: relative;
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.15);
+
+    background: rgba(255, 255, 255, 0.04);
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.tis-demo-close:hover {
+    background: #e31e24;
+    border-color: #e31e24;
+
+    transform: rotate(5deg);
+}
+
+
+.tis-demo-close span {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 15px;
+    height: 1px;
+
+    background: #ffffff;
+}
+
+
+.tis-demo-close span:first-child {
+    transform:
+        translate(-50%, -50%) rotate(45deg);
+}
+
+
+.tis-demo-close span:last-child {
+    transform:
+        translate(-50%, -50%) rotate(-45deg);
+}
+
+
+/* =========================================================
+   EXPERIENCE CONTENT AREA
+========================================================= */
+
+.tis-demo-modal-content {
+    position: relative;
+
+    flex: 1;
+    min-height: 0;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 70% 20%,
+            rgba(227, 30, 36, 0.06),
+            transparent 30%),
+        #151515;
+}
+
+
+/* =========================================================
+   TEMPORARY PLACEHOLDER
+========================================================= */
+
+.tis-demo-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    text-align: center;
+}
+
+
+.tis-demo-placeholder>span {
+    margin-bottom: 20px;
+
+    font-size: 0.58rem;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+
+    color: #e31e24;
+}
+
+
+.tis-demo-placeholder strong {
+    font-size:
+        clamp(2.5rem, 5vw, 5.5rem);
+
+    font-weight: 400;
+    line-height: 0.95;
+
+    letter-spacing: -0.045em;
+
+    color: #ffffff;
+}
+
+
+.tis-demo-placeholder p {
+    width: min(430px, 100%);
+
+    margin-top: 25px;
+
+    font-size: 0.8rem;
+    line-height: 1.6;
+
+    color: rgba(255, 255, 255, 0.46);
+}
+
+
+/* =========================================================
+   HIDE FLOATING SITE ELEMENTS WHILE EXPERIENCE IS OPEN
+========================================================= */
+
+body.tis-demo-open .tis-demo-trigger,
+body.tis-demo-open .floating-nav {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .tis-demo-modal {
+        padding: 14px;
+    }
+
+
+    .tis-demo-modal-panel {
+        width: calc(100vw - 28px);
+        height: calc(100svh - 28px);
+
+        border-radius: 15px;
+    }
+
+
+    .tis-demo-modal-top {
+        height: 68px;
+
+        padding:
+            0 16px 0 20px;
+    }
+
+
+    .tis-demo-modal-title {
+        gap: 11px;
+    }
+
+
+    .tis-demo-close {
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .tis-demo-modal {
+        padding: 0;
+
+        align-items: stretch;
+    }
+
+
+    .tis-demo-modal-panel {
+        width: 100%;
+        height: 100svh;
+
+        border: 0;
+        border-radius: 0;
+
+        transform:
+            translateY(30px) scale(1);
+    }
+
+
+    .tis-demo-modal-top {
+        height: 64px;
+
+        padding:
+            0 14px 0 18px;
+    }
+
+
+    .tis-demo-modal-title span {
+        display: none;
+    }
+
+
+    .tis-demo-modal-title strong {
+        font-size: 0.68rem;
+    }
+
+
+    .tis-demo-close {
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .tis-demo-placeholder {
+        padding: 28px;
+    }
+
+
+    .tis-demo-placeholder strong {
+        font-size:
+            clamp(2.6rem, 12vw, 4rem);
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .tis-demo-modal,
+    .tis-demo-backdrop,
+    .tis-demo-modal-panel {
+        transition-duration: 0.01ms;
+    }
+
+}
+/* =========================================================
+   EMBEDDED TIS EXPERIENCE
+========================================================= */
+
+.tis-demo-frame {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+
+    background: #111;
+}

@@ -15,15 +15,24 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+    <!-- SHARED STYLES -->
     <link rel="stylesheet" href="../css/style.css">
+
+    <!-- SOLUTIONS PAGE -->
     <link rel="stylesheet" href="../css/solutions.css">
+
+    <!-- SHARED TIS DEMO -->
+    <link rel="stylesheet" href="../css/tis-demo.css">
+    <link rel="stylesheet" href="../css/experience.css">
 </head>
+
 
 <body class="solutions-page">
 
-    <!-- =========================================
+
+    <!-- =====================================================
          NAVIGATION
-    ========================================== -->
+    ====================================================== -->
 
     <header class="site-header">
 
@@ -34,7 +43,6 @@
         <nav class="desktop-nav" aria-label="Main navigation">
             <a href="solutions.html">Solutions</a>
             <a href="projects.html">Projects</a>
-            <a href="experience.html">Experience</a>
             <a href="partner.html">Partners</a>
             <a href="about.html">About</a>
         </nav>
@@ -52,70 +60,27 @@
     </header>
 
 
+
     <main>
 
-        <!-- =========================================
-             HERO
-        ========================================== -->
 
-        <section class="solutions-hero">
+        <!-- =====================================================
+             SOLUTIONS EXPLORER
+        ====================================================== -->
 
-            <div class="solutions-hero-media"></div>
-            <div class="solutions-hero-shade"></div>
-
-            <div class="solutions-hero-label">
-                <span>Nairobi</span>
-                <span>East Africa</span>
-            </div>
-
-            <div class="solutions-hero-content">
-
-                <p class="section-tag light">
-                    Intelligent systems
-                </p>
-
-                <h1>
-                    One system.<br>
-                    <em>Every part</em> of your space.
-                </h1>
-
-                <div class="solutions-hero-bottom">
-
-                    <p>
-                        Lighting, climate, security, entertainment and energy
-                        working together through one intelligent platform.
-                    </p>
-
-                    <a href="#systems" class="text-link light-link">
-                        Explore systems
-                        <span>↓</span>
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             SYSTEMS EXPLORER
-        ========================================== -->
-
-        <section class="systems-explorer section-light" id="systems">
+        <section class="systems-explorer" id="systems">
 
             <div class="systems-explorer-inner">
 
+
+                <!-- INTRO -->
+
                 <div class="systems-heading">
 
-                    <span class="systems-number">
-                        01
-                    </span>
-
-                    <h2>
+                    <h1>
                         Technology should<br>
                         work <em>as one.</em>
-                    </h2>
+                    </h1>
 
                     <p>
                         Select a system to explore how TIS brings control,
@@ -125,193 +90,609 @@
                 </div>
 
 
-                <!-- SYSTEM SELECTOR -->
 
-                <div class="systems-selector" role="tablist" aria-label="TIS systems">
+                <!-- =================================================
+                     SYSTEM SELECTOR
+                ================================================== -->
 
-                    <button class="system-option active" type="button" data-system="lighting">
-                        Lighting
+                <div class="systems-selector" role="tablist" aria-label="Explore TIS systems">
+
+
+                    <!-- LIGHTING -->
+
+                    <button class="system-option active" type="button" role="tab" aria-selected="true"
+                        data-system="lighting">
+
+                        <span class="system-option-icon">
+
+                            <svg viewBox="0 0 32 32" aria-hidden="true">
+                                <path d="M11 21h10"></path>
+                                <path d="M12.5 25h7"></path>
+                                <path d="M13.5 28h5"></path>
+
+                                <path d="M10.5 18.5
+                                         C8.8 17
+                                         8 14.9
+                                         8 12.5
+                                         C8 8.1
+                                         11.6 4.5
+                                         16 4.5
+                                         C20.4 4.5
+                                         24 8.1
+                                         24 12.5
+                                         C24 14.9
+                                         23.2 17
+                                         21.5 18.5
+                                         C20.4 19.5
+                                         20 20
+                                         20 21
+                                         H12
+                                         C12 20
+                                         11.6 19.5
+                                         10.5 18.5Z">
+                                </path>
+
+                                <path d="M16 1.5v-1"></path>
+                                <path d="M5.5 5.5l-2-2"></path>
+                                <path d="M26.5 5.5l2-2"></path>
+                            </svg>
+
+                        </span>
+
+                        <span class="system-option-label">
+                            Lighting
+                        </span>
+
                     </button>
 
-                    <button class="system-option" type="button" data-system="climate">
-                        Climate
+
+
+                    <!-- CLIMATE -->
+
+                    <button class="system-option" type="button" role="tab" aria-selected="false" data-system="climate">
+
+                        <span class="system-option-icon">
+
+                            <svg viewBox="0 0 32 32" aria-hidden="true">
+
+                                <path d="M14 18.5V7
+                                         a4 4 0 0 1 8 0
+                                         v11.5
+                                         a7 7 0 1 1-8 0Z">
+                                </path>
+
+                                <path d="M18 9v12"></path>
+                                <circle cx="18" cy="23" r="2.5"></circle>
+
+                            </svg>
+
+                        </span>
+
+                        <span class="system-option-label">
+                            Climate
+                        </span>
+
                     </button>
 
-                    <button class="system-option" type="button" data-system="security">
-                        Security
+
+
+                    <!-- SECURITY -->
+
+                    <button class="system-option" type="button" role="tab" aria-selected="false" data-system="security">
+
+                        <span class="system-option-icon">
+
+                            <svg viewBox="0 0 32 32" aria-hidden="true">
+
+                                <path d="M16 3
+                                         L26 7
+                                         V14
+                                         C26 21
+                                         22 26
+                                         16 29
+                                         C10 26
+                                         6 21
+                                         6 14
+                                         V7Z">
+                                </path>
+
+                                <path d="M12 16l3 3 6-7"></path>
+
+                            </svg>
+
+                        </span>
+
+                        <span class="system-option-label">
+                            Security
+                        </span>
+
                     </button>
 
-                    <button class="system-option" type="button" data-system="curtains">
-                        Shading
+
+
+                    <!-- CURTAINS -->
+
+                    <button class="system-option" type="button" role="tab" aria-selected="false" data-system="curtains">
+
+                        <span class="system-option-icon">
+
+                            <svg viewBox="0 0 32 32" aria-hidden="true">
+
+                                <path d="M5 5h22"></path>
+                                <path d="M8 5v22"></path>
+                                <path d="M24 5v22"></path>
+
+                                <path d="M8 7
+                                         C13 10
+                                         13 22
+                                         8 27">
+                                </path>
+
+                                <path d="M24 7
+                                         C19 10
+                                         19 22
+                                         24 27">
+                                </path>
+
+                            </svg>
+
+                        </span>
+
+                        <span class="system-option-label">
+                            Shading
+                        </span>
+
                     </button>
 
-                    <button class="system-option" type="button" data-system="entertainment">
-                        Entertainment
+
+
+                    <!-- ENTERTAINMENT -->
+
+                    <button class="system-option" type="button" role="tab" aria-selected="false"
+                        data-system="entertainment">
+
+                        <span class="system-option-icon">
+
+                            <svg viewBox="0 0 32 32" aria-hidden="true">
+
+                                <rect x="6" y="3" width="20" height="26" rx="3"></rect>
+
+                                <circle cx="16" cy="19" r="5"></circle>
+                                <circle cx="16" cy="9" r="2"></circle>
+
+                            </svg>
+
+                        </span>
+
+                        <span class="system-option-label">
+                            Entertainment
+                        </span>
+
                     </button>
 
-                    <button class="system-option" type="button" data-system="energy">
-                        Energy
+
+
+                    <!-- ENERGY -->
+
+                    <button class="system-option" type="button" role="tab" aria-selected="false" data-system="energy">
+
+                        <span class="system-option-icon">
+
+                            <svg viewBox="0 0 32 32" aria-hidden="true">
+
+                                <path d="M18 2
+                                         L8 18
+                                         H15
+                                         L13 30
+                                         L24 13
+                                         H17Z">
+                                </path>
+
+                            </svg>
+
+                        </span>
+
+                        <span class="system-option-label">
+                            Energy
+                        </span>
+
                     </button>
 
-                    <button class="system-option" type="button" data-system="cinema">
-                        Cinema
+
+
+                    <!-- CINEMA -->
+
+                    <button class="system-option" type="button" role="tab" aria-selected="false" data-system="cinema">
+
+                        <span class="system-option-icon">
+
+                            <svg viewBox="0 0 32 32" aria-hidden="true">
+
+                                <rect x="3" y="6" width="26" height="18" rx="2"></rect>
+
+                                <path d="M13 11l8 4-8 4Z"></path>
+
+                                <path d="M10 28h12"></path>
+
+                            </svg>
+
+                        </span>
+
+                        <span class="system-option-label">
+                            Home Cinema
+                        </span>
+
                     </button>
 
                 </div>
 
 
-                <!-- ACTIVE SYSTEM -->
 
-                <div class="system-display">
+                <!-- =================================================
+                     ACTIVE SYSTEM
+                ================================================== -->
 
-                    <div class="system-visual">
+                <article class="system-display" id="system-display" aria-live="polite">
 
-                        <div class="system-image" id="system-image">
-                        </div>
 
-                        <span class="system-image-label" id="system-image-label">
+                    <!-- IMAGE -->
+
+                    <div class="system-image" id="system-image" role="img" aria-label="Intelligent Lighting">
+                    </div>
+
+
+                    <!-- IMAGE GRADIENT -->
+
+                    <div class="system-display-shade"></div>
+
+
+
+                    <!-- TOP INFORMATION -->
+
+                    <div class="system-display-top">
+
+                        <span id="system-category">
                             Intelligent Lighting
+                        </span>
+
+                        <span class="system-counter">
+                            <strong id="system-number">01</strong>
+                            <i>/</i>
+                            07
                         </span>
 
                     </div>
 
 
-                    <div class="system-information">
 
-                        <div class="system-information-top">
+                    <!-- MAIN CONTENT -->
 
-                            <span id="system-number">
-                                01
-                            </span>
+                    <div class="system-display-content">
 
-                            <span id="system-category">
-                                Intelligent Lighting
-                            </span>
+
+                        <div class="system-title-wrap">
+
+                            <h2 id="system-title">
+                                Light that changes
+                                <em>with the space.</em>
+                            </h2>
+
+                        </div>
+
+
+
+                        <div class="system-details">
+
+
+                            <p id="system-description">
+                                Create lighting scenes, automate everyday routines
+                                and control different areas of the property from
+                                switches, sensors or the TIS app.
+                            </p>
+
+
+                            <div class="system-capabilities" id="system-capabilities">
+
+                                <span>Scenes</span>
+                                <span>Dimming</span>
+                                <span>Scheduling</span>
+                                <span>Motion</span>
+                                <span>Remote control</span>
+
+                            </div>
+
+
+                            <button class="next-system" id="next-system" type="button">
+
+                                <span>
+                                    Next system
+                                </span>
+
+                                <i>→</i>
+
+                            </button>
 
                         </div>
 
-
-                        <h3 id="system-title">
-                            Light that changes
-                            <em>with the space.</em>
-                        </h3>
-
-
-                        <p id="system-description">
-                            Create lighting scenes, automate everyday routines
-                            and control different areas of the property from
-                            switches, sensors or the TIS app.
-                        </p>
-
-
-                        <div class="system-capabilities" id="system-capabilities">
-
-                            <span>Scenes</span>
-                            <span>Dimming</span>
-                            <span>Scheduling</span>
-                            <span>Motion</span>
-                            <span>Remote control</span>
-
-                        </div>
 
                     </div>
 
-                </div>
+                </article>
+
 
             </div>
 
         </section>
 
 
-        <!-- =========================================
+
+        <!-- =====================================================
              CONNECTED EXPERIENCE
-        ========================================== -->
+             intentionally different from homepage image sections
+        ====================================================== -->
 
         <section class="connected-experience">
 
-            <div class="connected-background"></div>
-            <div class="connected-shade"></div>
+
+            <!-- DECORATIVE GRID -->
+
+            <div class="connected-grid" aria-hidden="true"></div>
+
+
+
+            <!-- DECORATIVE GLOW -->
+
+            <div class="connected-glow" aria-hidden="true"></div>
+
+
 
             <div class="connected-content">
 
-                <span class="connected-label">
-                    The TIS ecosystem
-                </span>
 
-                <h2>
-                    Different systems.<br>
-                    <em>One experience.</em>
-                </h2>
+                <!-- SECTION HEADER -->
 
-                <div class="connected-bottom">
+                <div class="connected-header">
 
-                    <p>
-                        Lighting can respond to security. Curtains can move
-                        with a scene. Climate can adjust around occupancy.
-                        TIS brings individual technologies together so the
-                        building behaves as one system.
-                    </p>
+                    <span class="connected-label">
+                        The TIS ecosystem
+                    </span>
 
-                    <a href="contact.html">
-                        Discuss your project
-                        <span>↗</span>
-                    </a>
+                    <span class="connected-index">
+                        07 systems · 01 experience
+                    </span>
+
+                </div>
+
+
+
+                <!-- LARGE TITLE -->
+
+                <div class="connected-title">
+
+                    <h2>
+                        Different systems.<br>
+                        <em>One experience.</em>
+                    </h2>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     INTERACTIVE-STYLE ECOSYSTEM VISUAL
+                ================================================== -->
+
+                <div class="ecosystem-layout">
+
+
+                    <!-- LEFT TEXT -->
+
+                    <div class="ecosystem-copy">
+
+                        <p>
+                            Lighting can respond to security.
+                            Curtains can move with a scene.
+                            Climate can adjust around occupancy.
+                        </p>
+
+                        <p>
+                            TIS connects individual technologies so
+                            the building behaves as one intelligent system.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- ORBIT GRAPHIC -->
+
+                    <div class="ecosystem-visual" aria-hidden="true">
+
+
+                        <div class="orbit orbit-one"></div>
+                        <div class="orbit orbit-two"></div>
+                        <div class="orbit orbit-three"></div>
+
+
+                        <!-- CENTER -->
+
+                        <div class="ecosystem-core">
+
+                            <span>TIS</span>
+
+                            <small>
+                                CONTROL
+                            </small>
+
+                        </div>
+
+
+
+                        <!-- NODES -->
+
+                        <div class="ecosystem-node node-lighting">
+
+                            <span class="node-dot"></span>
+
+                            <p>
+                                Lighting
+                            </p>
+
+                        </div>
+
+
+                        <div class="ecosystem-node node-climate">
+
+                            <span class="node-dot"></span>
+
+                            <p>
+                                Climate
+                            </p>
+
+                        </div>
+
+
+                        <div class="ecosystem-node node-security">
+
+                            <span class="node-dot"></span>
+
+                            <p>
+                                Security
+                            </p>
+
+                        </div>
+
+
+                        <div class="ecosystem-node node-shading">
+
+                            <span class="node-dot"></span>
+
+                            <p>
+                                Shading
+                            </p>
+
+                        </div>
+
+
+                        <div class="ecosystem-node node-media">
+
+                            <span class="node-dot"></span>
+
+                            <p>
+                                Media
+                            </p>
+
+                        </div>
+
+
+                        <div class="ecosystem-node node-energy">
+
+                            <span class="node-dot"></span>
+
+                            <p>
+                                Energy
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- CTA -->
+
+                    <div class="ecosystem-action">
+
+                        <span>
+                            One interface.<br>
+                            One connected space.
+                        </span>
+
+                        <a href="contact.html">
+                            Discuss your project
+                            <i>↗</i>
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PARTNER MARQUEE
+        ====================================================== -->
+
+        <section class="partner-strip" aria-label="Technology partners">
+
+            <div class="marquee">
+
+                <div class="marquee-track">
+
+
+                    <div class="marquee-group">
+
+                        <span>TIS</span>
+                        <i></i>
+
+                        <span>DNAKE</span>
+                        <i></i>
+
+                        <span>MARCAUDIO</span>
+                        <i></i>
+
+                        <span>MCLELLAND</span>
+                        <i></i>
+
+                    </div>
+
+
+                    <div class="marquee-group" aria-hidden="true">
+
+                        <span>TIS</span>
+                        <i></i>
+
+                        <span>DNAKE</span>
+                        <i></i>
+
+                        <span>MARCAUDIO</span>
+                        <i></i>
+
+                        <span>MCLELLAND</span>
+                        <i></i>
+
+                    </div>
+
 
                 </div>
 
             </div>
 
         </section>
+
 
     </main>
 
 
-    <!-- =========================================
-         PARTNER MARQUEE
-    ========================================== -->
 
-    <section class="partner-strip" aria-label="Technology partners">
-
-        <div class="marquee">
-
-            <div class="marquee-track">
-
-                <div class="marquee-group">
-                    <span>TIS</span>
-                    <i></i>
-                    <span>DNAKE</span>
-                    <i></i>
-                    <span>MARCAUDIO</span>
-                    <i></i>
-                    <span>MCLELLAND</span>
-                    <i></i>
-                </div>
-
-                <div class="marquee-group" aria-hidden="true">
-                    <span>TIS</span>
-                    <i></i>
-                    <span>DNAKE</span>
-                    <i></i>
-                    <span>MARCAUDIO</span>
-                    <i></i>
-                    <span>MCLELLAND</span>
-                    <i></i>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================================
+    <!-- =====================================================
          FOOTER
-    ========================================== -->
+    ====================================================== -->
 
     <footer>
 
+
         <div class="footer-top">
+
+
+            <!-- BRAND -->
 
             <div class="footer-brand">
 
@@ -325,78 +706,150 @@
             </div>
 
 
+
+            <!-- EXPLORE -->
+
             <div class="footer-column">
 
-                <span>Explore</span>
+                <span>
+                    Explore
+                </span>
 
-                <a href="solutions.html">Solutions</a>
-                <a href="projects.html">Projects</a>
-                <a href="experience.html">Experience</a>
-                <a href="partner.html">Partners</a>
+                <a href="solutions.html">
+                    Solutions
+                </a>
+
+                <a href="projects.html">
+                    Projects
+                </a>
+
+                <a href="experience.html">
+                    Experience
+                </a>
+
+                <a href="partner.html">
+                    Partners
+                </a>
 
             </div>
 
 
+
+            <!-- COMPANY -->
+
             <div class="footer-column">
 
-                <span>Company</span>
+                <span>
+                    Company
+                </span>
 
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-                <a href="support.html">Support</a>
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="support.html">
+                    Support
+                </a>
 
             </div>
 
 
+
+            <!-- SOCIALS -->
+
             <div class="footer-column">
 
-                <span>Connect</span>
+                <span>
+                    Connect
+                </span>
+
 
                 <div class="footer-socials">
+
+
+                    <!-- INSTAGRAM -->
 
                     <a href="https://www.instagram.com/tis_eastafrica?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
                         target="_blank" rel="noopener noreferrer" aria-label="TIS East Africa on Instagram">
 
                         <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-                            <circle cx="12" cy="12" r="4"></circle>
-                            <circle cx="17.5" cy="6.5" r="1"></circle>
+
+                            <rect x="3" y="3" width="18" height="18" rx="5">
+                            </rect>
+
+                            <circle cx="12" cy="12" r="4">
+                            </circle>
+
+                            <circle cx="17.5" cy="6.5" r="1">
+                            </circle>
+
                         </svg>
 
                     </a>
 
+
+
+                    <!-- FACEBOOK -->
 
                     <a href="https://www.facebook.com/p/TIS-East-Africa-100091730113954/" target="_blank"
                         rel="noopener noreferrer" aria-label="TIS East Africa on Facebook">
 
                         <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M14 8h3V4h-3c-3 0-5 2-5 5v2H6v4h3v7h4v-7h3.5l.5-4h-4V9c0-.7.3-1 1-1z"></path>
+
+                            <path d="M14 8h3V4h-3c-3 0-5 2-5 5v2H6v4h3v7h4v-7h3.5l.5-4h-4V9c0-.7.3-1 1-1z">
+                            </path>
+
                         </svg>
 
                     </a>
+
 
                 </div>
 
             </div>
 
+
         </div>
 
+
+
+        <!-- FOOTER BOTTOM -->
 
         <div class="footer-bottom">
 
-            <span>© 2026 TIS East Africa</span>
+            <span>
+                © 2026 TIS East Africa
+            </span>
 
-            <span>Nairobi · Kenya</span>
+            <span>
+                Nairobi · Kenya
+            </span>
 
-            <a href="#">Privacy</a>
+            <a href="#">
+                Privacy
+            </a>
 
         </div>
+
 
     </footer>
 
 
+
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+
     <script src="../js/script.js"></script>
+
     <script src="../js/solutions.js"></script>
+
+    <script src="../js/tis-demo.js"></script>
+
 
 </body>
 
