@@ -1675,30 +1675,40 @@ body.menu-open .menu-links a:nth-child(5) {
 
 }/* =========================================================
    GLOBAL CLEAN ARROWS
-   Replaces font / emoji-style diagonal arrows
+   CSS-drawn arrows — no emoji rendering on mobile
 ========================================================= */
 
+/* Elements that contain the old ↗ character */
 .nav-contact span,
 .text-link span,
 .menu-links i,
 .menu-contact>a span,
-.footer-location-link i {
-    font-size: 0;
-    width: 10px;
-    height: 10px;
+.footer-location-link i,
+.application-card-content i,
+.home-solutions-footer a span {
+    font-size: 0 !important;
+
+    width: 11px;
+    height: 11px;
+
     position: relative;
     display: inline-block;
-    flex-shrink: 0;
+    flex: 0 0 11px;
+
+    line-height: 1;
 }
 
-/* diagonal arrow line */
 
+/* Diagonal shaft */
 .nav-contact span::before,
 .text-link span::before,
 .menu-links i::before,
 .menu-contact>a span::before,
-.footer-location-link i::before {
+.footer-location-link i::before,
+.application-card-content i::before,
+.home-solutions-footer a span::before {
     content: "";
+
     position: absolute;
 
     width: 11px;
@@ -1715,14 +1725,17 @@ body.menu-open .menu-links a:nth-child(5) {
     transform-origin: center;
 }
 
-/* arrow head */
 
+/* Arrow head */
 .nav-contact span::after,
 .text-link span::after,
 .menu-links i::after,
 .menu-contact>a span::after,
-.footer-location-link i::after {
+.footer-location-link i::after,
+.application-card-content i::after,
+.home-solutions-footer a span::after {
     content: "";
+
     position: absolute;
 
     width: 5px;
@@ -1733,4 +1746,31 @@ body.menu-open .menu-links a:nth-child(5) {
 
     border-top: 1px solid currentColor;
     border-right: 1px solid currentColor;
+}
+
+
+/* =========================================================
+   ARROW HOVER MOVEMENT
+========================================================= */
+
+.nav-contact:hover span,
+.text-link:hover span,
+.menu-links a:hover i,
+.menu-contact>a:hover span,
+.footer-location-link:hover i,
+.application-card:hover .application-card-content i,
+.home-solutions-footer a:hover span {
+    transform: translate(3px, -3px);
+}
+
+
+/* Smooth movement */
+.nav-contact span,
+.text-link span,
+.menu-links i,
+.menu-contact>a span,
+.footer-location-link i,
+.application-card-content i,
+.home-solutions-footer a span {
+    transition: transform 0.3s ease;
 }
