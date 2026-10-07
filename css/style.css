@@ -149,17 +149,16 @@ h3 {
 .desktop-nav {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: clamp(25px, 3vw, 48px);
-
+    overflow: visible;
 }
-
 .desktop-nav a,
-
+.desktop-nav .nav-dropdown-trigger,
 .nav-contact {
     font-size: 0.72rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-
 }
 
 .desktop-nav a {
@@ -211,7 +210,165 @@ h3 {
     display: none;
 
 }
+/* =========================================================
+   DESKTOP NAV DROPDOWNS
+========================================================= */
 
+.nav-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Solutions / Products trigger */
+
+.desktop-nav .nav-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+    color: inherit;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+/* tiny dropdown arrow */
+
+.nav-chevron {
+    display: inline-block;
+    font-size: 0.55rem;
+    line-height: 1;
+    opacity: 0.55;
+
+    transform: translateY(-1px);
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.nav-dropdown:hover .nav-chevron,
+.nav-dropdown.is-open .nav-chevron {
+    transform: translateY(-1px) rotate(180deg);
+    opacity: 1;
+}
+
+/* dropdown itself */
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 20px);
+    left: -18px;
+
+    min-width: 210px;
+    padding: 10px;
+
+    background: rgba(15, 15, 15, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(-6px);
+
+    transition:
+        opacity 0.22s ease,
+        transform 0.22s ease,
+        visibility 0.22s ease;
+
+    z-index: 200;
+}
+
+/* invisible bridge so hover doesn't disappear
+   while mouse travels down to menu */
+
+.nav-dropdown-menu::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -20px;
+    height: 20px;
+}
+
+/* show */
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu,
+.nav-dropdown.is-open .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* links inside dropdown */
+
+.desktop-nav .nav-dropdown-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 11px 12px;
+
+    border-radius: 8px;
+
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+color: rgba(255, 255, 255, 0.72) !important;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.desktop-nav .nav-dropdown-menu a:hover {
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.07);
+}
+
+/* kill normal navbar underline inside dropdown */
+
+.desktop-nav .nav-dropdown-menu a::after {
+    display: none;
+}
+
+/* All Solutions / All Products */
+
+.desktop-nav .nav-dropdown-menu .nav-dropdown-all {
+    margin-top: 7px;
+    padding-top: 13px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0;
+
+    color: #fff !important;
+}
+
+.nav-dropdown-all span {
+    transition: transform 0.25s ease;
+}
+
+.nav-dropdown-all:hover span {
+    transform: translate(3px, -3px);
+}
 /* =========================================================
    HERO
 
@@ -1773,4 +1930,19 @@ body.menu-open .menu-links a:nth-child(5) {
 .application-card-content i,
 .home-solutions-footer a span {
     transition: transform 0.3s ease;
+}    
+/* =========================================================
+   MOBILE
+   Desktop dropdowns disappear with desktop navigation
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .nav-dropdown-menu {
+        display: none;
+    }
+
+    .nav-chevron {
+        display: none;
+    }
 }

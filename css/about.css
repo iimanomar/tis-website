@@ -40,8 +40,8 @@
 
     z-index: 100;
 }
-
 .about-page .site-header .desktop-nav a,
+.about-page .site-header .desktop-nav .nav-dropdown-trigger,
 .about-page .site-header .nav-contact {
     color: #111;
 }

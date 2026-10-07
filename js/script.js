@@ -123,32 +123,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <nav class="menu-links">
 
-                <a href="solutions.html">
-                    <span>01</span>
-                    <strong>Solutions</strong>
-                    <i>↗</i>
-                </a>
+    <a href="solutions.html">
+        <span>01</span>
+        <strong>Solutions</strong>
+        <i>↗</i>
+    </a>
 
-                <a href="projects.html">
-                    <span>02</span>
-                    <strong>Projects</strong>
-                    <i>↗</i>
-                </a>
+    <a href="products.html">
+        <span>02</span>
+        <strong>Products</strong>
+        <i>↗</i>
+    </a>
 
+    <a href="projects.html">
+        <span>03</span>
+        <strong>Projects</strong>
+        <i>↗</i>
+    </a>
 
-                <a href="partner.html">
-                    <span>04</span>
-                    <strong>Partners</strong>
-                    <i>↗</i>
-                </a>
+    <a href="partner.html">
+        <span>04</span>
+        <strong>Partners</strong>
+        <i>↗</i>
+    </a>
 
-                <a href="about.html">
-                    <span>05</span>
-                    <strong>About</strong>
-                    <i>↗</i>
-                </a>
+    <a href="about.html">
+        <span>05</span>
+        <strong>About</strong>
+        <i>↗</i>
+    </a>
 
-            </nav>
+</nav>
 
 
             <div class="menu-contact">

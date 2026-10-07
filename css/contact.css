@@ -16,7 +16,11 @@
  .contact-header {
      color: #0b0b0b;
  }
-
+ .contact-header .desktop-nav a,
+ .contact-header .desktop-nav .nav-dropdown-trigger,
+ .contact-header .nav-contact {
+     color: #0b0b0b;
+ }
  .contact-header .desktop-nav a::after {
      background: #0b0b0b;
  }

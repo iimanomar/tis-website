@@ -42,8 +42,9 @@
 .solutions-page .site-header .menu-button span {
     background: #111;
 }
-
-
+.solutions-page .desktop-nav .nav-dropdown-trigger {
+    color: #111;
+}
 /* =========================================================
    03 — SYSTEMS EXPLORER
 ========================================================= */

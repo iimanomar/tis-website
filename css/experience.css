@@ -18,6 +18,7 @@
 }
 
 .experience-page .desktop-nav a,
+.experience-page .desktop-nav .nav-dropdown-trigger,
 .experience-page .nav-contact {
     color: #111;
 }
