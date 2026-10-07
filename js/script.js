@@ -451,3 +451,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 });
+/* =========================================================
+   MOBILE-SAFE EXTERNAL ARROWS
+   Replaces ↗ text so iOS cannot render it as an emoji
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    document.querySelectorAll("i, span").forEach((element) => {
+
+        if (element.textContent.trim() === "↗") {
+
+            element.textContent = "";
+            element.classList.add("css-arrow");
+
+        }
+
+    });
+
+});

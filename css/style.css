@@ -1946,3 +1946,69 @@ body.menu-open .menu-links a:nth-child(5) {
         display: none;
     }
 }
+/* =========================================================
+   FINAL MOBILE-SAFE ARROW FIX
+   Prevents iOS from rendering ↗ as emoji
+========================================================= */
+
+@supports (-webkit-touch-callout: none) {
+
+    i,
+    a span {
+        font-variant-emoji: text;
+    }
+
+}
+/* =========================================================
+   CSS ARROW
+========================================================= */
+
+.css-arrow {
+    width: 12px !important;
+    height: 12px !important;
+
+    display: inline-block !important;
+    position: relative !important;
+
+    flex: 0 0 12px;
+
+    font-size: 0 !important;
+}
+
+
+/* diagonal line */
+
+.css-arrow::before {
+    content: "";
+
+    position: absolute;
+
+    width: 11px;
+    height: 1.5px;
+
+    top: 50%;
+    left: 50%;
+
+    background: currentColor;
+
+    transform:
+        translate(-50%, -50%) rotate(-45deg);
+}
+
+
+/* arrow head */
+
+.css-arrow::after {
+    content: "";
+
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    top: 0;
+    right: 0;
+
+    border-top: 1.5px solid currentColor;
+    border-right: 1.5px solid currentColor;
+}
