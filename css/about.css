@@ -727,12 +727,14 @@
     font-weight: 400;
 }
 
-.story-main h2 span {
-    display: block;
-
+.story-main h2 span,
+.story-main h2 em,
+.about-media-heading h2 span,
+.about-media-heading h2 em {
     color: var(--about-red);
+    font-style: italic;
+    font-weight: 300;
 }
-
 
 /* =========================================================
    16 — STORY COPY
@@ -886,8 +888,9 @@
 
 .experience-heading h2 span {
     display: block;
-
     color: var(--about-red);
+    font-style: italic;
+    font-weight: 300;
 }
 
 
