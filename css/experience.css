@@ -3404,4 +3404,61 @@ html.tis-experience-embedded .experience-stage {
 
 .app-bottom-nav button>span {
     font-size: 10px !important;
+}/* =========================================================
+   MUSIC PLAY / PAUSE ICON
+   Pure CSS — no emoji
+========================================================= */
+
+/* PLAY TRIANGLE */
+
+#music-play .music-play-icon {
+    display: block;
+
+    width: 0;
+    height: 0;
+
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 10px solid #fff;
+
+    margin-left: 2px;
+}
+
+
+/* PAUSE — when button has .playing */
+
+#music-play.playing .music-play-icon {
+    position: relative;
+
+    width: 12px;
+    height: 14px;
+
+    margin-left: 0;
+
+    border: 0;
+}
+
+
+#music-play.playing .music-play-icon::before,
+#music-play.playing .music-play-icon::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+
+    width: 3px;
+    height: 14px;
+
+    background: #fff;
+    border-radius: 1px;
+}
+
+
+#music-play.playing .music-play-icon::before {
+    left: 1px;
+}
+
+
+#music-play.playing .music-play-icon::after {
+    right: 1px;
 }

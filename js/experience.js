@@ -1304,14 +1304,22 @@ document.addEventListener("DOMContentLoaded", () => {
                     : "Nothing playing";
 
         }
-
-
         if (play) {
 
             play.classList.toggle(
                 "playing",
                 state.music.playing
             );
+
+            const playIcon =
+                play.querySelector(".music-play-icon");
+
+            if (playIcon) {
+                playIcon.classList.toggle(
+                    "is-playing",
+                    state.music.playing
+                );
+            }
 
             play.setAttribute(
                 "aria-label",
@@ -1321,7 +1329,6 @@ document.addEventListener("DOMContentLoaded", () => {
             );
 
         }
-
 
         if (volume) {
 

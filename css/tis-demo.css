@@ -865,4 +865,58 @@ body.tis-demo-open .floating-nav {
 }/* Remove TIS text from mini Try TIS phone */
 .tis-demo-trigger-screen strong {
     display: none;
+}/* =========================================================
+   MUSIC PLAY / PAUSE ICONS
+   Pure CSS — no emoji characters
+========================================================= */
+
+/* =========================================================
+   MUSIC PLAY / PAUSE ICONS
+   Pure CSS — no emoji characters
+========================================================= */
+
+/* PLAY TRIANGLE */
+.play-icon {
+    display: block;
+    width: 0;
+    height: 0;
+
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 11px solid #fff;
+
+    margin-left: 3px;
+}
+
+
+/* PAUSE ICON */
+.pause-icon {
+    position: relative;
+
+    display: block;
+
+    width: 12px;
+    height: 14px;
+}
+
+.pause-icon::before,
+.pause-icon::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+
+    width: 4px;
+    height: 14px;
+
+    background: #fff;
+    border-radius: 1px;
+}
+
+.pause-icon::before {
+    left: 0;
+}
+
+.pause-icon::after {
+    right: 0;
 }
