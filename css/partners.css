@@ -1,0 +1,1219 @@
+/* =========================================================
+   TIS EAST AFRICA — PARTNERS
+========================================================= */
+
+:root {
+    --partners-cream: #f3f1ec;
+    --partners-black: #101010;
+    --partners-red: #e31e24;
+
+    --partners-dark-line: rgba(255, 255, 255, .15);
+    --partners-light-line: rgba(17, 17, 17, .22);
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.partners-page {
+    background: var(--partners-cream);
+    color: #111;
+}
+
+
+.partners-page main {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER — LIGHT
+========================================================= */
+
+.partners-page .site-header {
+    color: #111;
+}
+
+
+.partners-page .desktop-nav a,
+.partners-page .desktop-nav .nav-dropdown-trigger,
+.partners-page .nav-contact {
+    color: #111;
+}
+
+
+/* dropdown remains dark */
+
+.partners-page .desktop-nav .nav-dropdown-menu a {
+    color: rgba(255, 255, 255, .72) !important;
+}
+
+
+.partners-page .desktop-nav .nav-dropdown-menu a:hover {
+    color: #fff !important;
+    background: rgba(255, 255, 255, .07);
+}
+
+
+.partners-page .desktop-nav .nav-dropdown-menu .nav-dropdown-all {
+    color: #fff !important;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.partner-intro {
+    position: relative;
+
+    min-height: clamp(520px, 72vh, 700px);
+
+    padding:
+        clamp(135px, 13vh, 170px) var(--page-padding) clamp(58px, 7vw, 90px);
+
+    background: var(--partners-cream);
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   INTRO META
+========================================================= */
+
+.partner-intro-meta {
+    padding-bottom: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #111;
+
+    font-size: .58rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+}
+
+
+/* =========================================================
+   INTRO CONTENT
+========================================================= */
+
+.partner-intro-layout {
+    flex: 1;
+
+    padding-top: clamp(50px, 7vh, 85px);
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.6fr) minmax(220px, .4fr);
+
+    gap: clamp(45px, 8vw, 130px);
+
+    align-items: end;
+}
+
+
+/* =========================================================
+   INTRO HEADING
+========================================================= */
+
+.partner-intro h1 {
+    margin: 0;
+
+    max-width: 940px;
+
+    font-size: clamp(4rem, 6vw, 6.8rem);
+    line-height: .87;
+
+    letter-spacing: -.07em;
+    font-weight: 400;
+}
+
+
+.partner-intro h1 span {
+    font-weight: 300;
+}
+
+
+/* =========================================================
+   INTRO COPY
+========================================================= */
+
+.partner-intro-copy {
+    min-height: 160px;
+
+    padding-left: clamp(18px, 2vw, 28px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-left: 1px solid rgba(17, 17, 17, .24);
+}
+
+
+.partner-intro-copy p {
+    margin: 0;
+
+    max-width: 265px;
+
+    font-size: clamp(.72rem, .85vw, .82rem);
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   INTRO ARROW
+========================================================= */
+
+.partner-scroll-arrow {
+    align-self: flex-end;
+
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #111;
+    border-radius: 50%;
+
+    color: #111;
+    text-decoration: none;
+
+    font-size: .9rem;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+.partner-scroll-arrow:hover {
+    background: #111;
+    color: var(--partners-cream);
+
+    transform: translateY(4px);
+}
+
+
+/* =========================================================
+   BLACK BRAND SECTION
+========================================================= */
+
+.brand-stage {
+    position: relative;
+    z-index: 2;
+
+    padding:
+        clamp(38px, 4vw, 52px) var(--page-padding) clamp(78px, 8vw, 110px);
+
+    background: var(--partners-black);
+    color: #fff;
+
+    border-radius:
+        clamp(28px, 3vw, 42px) clamp(28px, 3vw, 42px) 0 0;
+}
+
+
+/* =========================================================
+   BRAND HEADER
+========================================================= */
+
+.brand-stage-header {
+    padding-bottom: 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .28);
+
+    color: rgba(255, 255, 255, .48);
+
+    font-size: .57rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+}
+
+
+/* =========================================================
+   BRAND GRID
+========================================================= */
+
+.brand-gallery {
+    margin-top: clamp(34px, 4vw, 50px);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    border-top: 1px solid var(--partners-dark-line);
+    border-left: 1px solid var(--partners-dark-line);
+}
+
+
+/* =========================================================
+   BRAND TILE
+========================================================= */
+
+.brand-tile {
+    position: relative;
+
+    min-height: clamp(310px, 31vw, 465px);
+
+    padding: clamp(20px, 2vw, 27px);
+
+    display: flex;
+    flex-direction: column;
+
+    color: #fff;
+    text-decoration: none;
+
+    border-right: 1px solid var(--partners-dark-line);
+    border-bottom: 1px solid var(--partners-dark-line);
+
+    overflow: hidden;
+
+    transition: background .35s ease;
+}
+
+
+.brand-tile:hover {
+    background: #191919;
+}
+
+
+/* tiny red hover line */
+
+.brand-tile::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: var(--partners-red);
+
+    transform: scaleX(0);
+    transform-origin: left center;
+
+    transition:
+        transform .5s cubic-bezier(.2, .75, .2, 1);
+}
+
+
+.brand-tile:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* =========================================================
+   BRAND META
+========================================================= */
+
+.brand-tile-meta {
+    color: rgba(255, 255, 255, .4);
+
+    font-size: .54rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .11em;
+}
+
+
+/* =========================================================
+   LOGOS
+========================================================= */
+
+.brand-tile-logo {
+    flex: 1;
+
+    padding:
+        clamp(34px, 5vw, 72px) clamp(25px, 5vw, 70px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.brand-tile-logo img {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: 54%;
+    max-height: 140px;
+
+    object-fit: contain;
+
+    transition:
+        transform .5s cubic-bezier(.2, .7, .2, 1);
+}
+
+
+.brand-tile:hover .brand-tile-logo img {
+    transform: scale(1.055);
+}
+
+
+/* individual sizing */
+
+.logo-tis {
+    max-width: 30% !important;
+}
+
+
+.logo-dnake {
+    max-width: 52% !important;
+
+    filter:
+        grayscale(1) brightness(0) invert(1);
+}
+
+
+.logo-marc {
+    max-width: 30% !important;
+    max-height: 155px !important;
+
+    filter:
+        grayscale(1) brightness(0) invert(1);
+}
+
+
+.logo-mclelland {
+    max-width: 52% !important;
+
+    filter:
+        grayscale(1) brightness(0) invert(1);
+}
+
+
+/* =========================================================
+   BRAND BOTTOM
+========================================================= */
+
+.brand-tile-bottom {
+    padding-top: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 1px solid rgba(255, 255, 255, .2);
+
+    font-size: .57rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+
+.brand-tile-bottom i {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, .32);
+    border-radius: 50%;
+
+    font-size: .82rem;
+    font-style: normal;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+.brand-tile:hover .brand-tile-bottom i {
+    background: #fff;
+    color: #111;
+
+    transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   PARTNER PROGRAM
+   CURVES OVER BLACK
+========================================================= */
+
+.partner-program {
+    position: relative;
+    z-index: 3;
+
+    margin-top: -40px;
+
+    padding:
+        clamp(38px, 4vw, 52px) var(--page-padding) clamp(55px, 6vw, 78px);
+
+    background: var(--partners-cream);
+    color: #111;
+
+    border-radius:
+        clamp(28px, 3vw, 42px) clamp(28px, 3vw, 42px) 0 0;
+}
+
+
+/* =========================================================
+   PROGRAM TOP
+========================================================= */
+
+.partner-program-top {
+    padding-bottom: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #111;
+
+    font-size: .57rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+}
+
+
+/* =========================================================
+   PROGRAM HEADING
+========================================================= */
+
+.partner-program-heading {
+    padding:
+        clamp(42px, 5vw, 68px) 0 clamp(42px, 5vw, 65px);
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.45fr) minmax(220px, .55fr);
+
+    gap: clamp(50px, 8vw, 120px);
+
+    align-items: end;
+}
+
+
+.partner-program-heading h2 {
+    margin: 0;
+
+    max-width: 850px;
+
+    font-size: clamp(3.6rem, 5.2vw, 6rem);
+    line-height: .88;
+
+    letter-spacing: -.067em;
+    font-weight: 400;
+}
+
+
+.partner-program-heading h2 em {
+    color: var(--partners-red);
+
+    font-family: inherit;
+    font-weight: 300;
+    font-style: italic;
+}
+
+
+.partner-program-heading p {
+    margin: 0;
+
+    max-width: 300px;
+
+    padding-left: 22px;
+
+    border-left: 1px solid rgba(17, 17, 17, .24);
+
+    font-size: clamp(.7rem, .8vw, .78rem);
+    line-height: 1.55;
+
+    color: rgba(17, 17, 17, .65);
+}
+
+
+/* =========================================================
+   PARTNER LANES
+========================================================= */
+
+.partner-types {
+    border-top: 1px solid #111;
+}
+
+
+/* =========================================================
+   PARTNER TYPE
+========================================================= */
+
+.partner-type {
+    position: relative;
+
+    min-height: clamp(100px, 9vw, 135px);
+
+    padding:
+        clamp(21px, 2.3vw, 31px) 0;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(190px, .8fr) minmax(190px, 1fr) auto;
+
+    gap: clamp(30px, 6vw, 100px);
+
+    align-items: center;
+
+    border-bottom: 1px solid rgba(17, 17, 17, .28);
+
+    color: #111;
+    text-decoration: none;
+
+    transition:
+        padding .35s ease,
+        background .35s ease;
+}
+
+
+/* =========================================================
+   PARTNER NAME
+========================================================= */
+
+.partner-type strong {
+    font-size: clamp(1.7rem, 2.35vw, 2.8rem);
+    line-height: 1;
+
+    letter-spacing: -.045em;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   PARTNER COPY
+========================================================= */
+
+.partner-type-copy {
+    font-size: clamp(.64rem, .75vw, .72rem);
+    line-height: 1.45;
+
+    color: rgba(17, 17, 17, .52);
+}
+
+
+/* =========================================================
+   PARTNER ARROW
+========================================================= */
+
+.partner-type i {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(17, 17, 17, .42);
+    border-radius: 50%;
+
+    font-size: .82rem;
+    font-style: normal;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+.partner-type:hover {
+    padding-left: 14px;
+    padding-right: 14px;
+
+    background: rgba(17, 17, 17, .035);
+}
+
+
+.partner-type:hover i {
+    background: #111;
+    color: var(--partners-cream);
+
+    transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   PARTNER CTA AREA
+========================================================= */
+
+.partner-program-bottom {
+    padding-top: clamp(32px, 4vw, 50px);
+
+    display: grid;
+
+    grid-template-columns:
+        1fr minmax(280px, .55fr);
+
+    gap: clamp(55px, 9vw, 140px);
+
+    align-items: end;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.partner-program-message>span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: .54rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .11em;
+}
+
+
+.partner-program-message p {
+    margin: 0;
+
+    max-width: 350px;
+
+    font-size: .7rem;
+    line-height: 1.5;
+
+    color: rgba(17, 17, 17, .53);
+}
+
+
+/* =========================================================
+   MAIN CTA
+========================================================= */
+
+.partner-main-cta {
+    padding:
+        16px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+
+    color: #111;
+    text-decoration: none;
+
+    font-size: .6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .11em;
+
+    transition:
+        padding .3s ease,
+        color .3s ease;
+}
+
+
+.partner-main-cta i {
+    font-size: .9rem;
+    font-style: normal;
+
+    transition:
+        transform .3s ease;
+}
+
+
+.partner-main-cta:hover {
+    padding-left: 12px;
+    padding-right: 12px;
+
+    color: var(--partners-red);
+}
+
+
+.partner-main-cta:hover i {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   MARQUEE
+========================================================= */
+
+.partners-page .partner-strip {
+    position: relative;
+    z-index: 4;
+
+    background: var(--partners-red);
+    color: #fff;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.partners-page footer {
+    border-top: 0;
+}
+
+
+/* =========================================================
+   MEDIUM DESKTOP / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .partner-intro {
+        min-height: 560px;
+    }
+
+
+    .partner-intro-layout {
+        grid-template-columns:
+            minmax(0, 1.4fr) minmax(200px, .6fr);
+
+        gap: 50px;
+    }
+
+
+    .partner-program-heading {
+        gap: 50px;
+    }
+
+
+    .partner-type {
+        grid-template-columns:
+            minmax(160px, .75fr) 1fr auto;
+
+        gap: 35px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+
+    /* INTRO */
+
+    .partner-intro {
+        min-height: auto;
+
+        padding-top: 125px;
+        padding-bottom: 58px;
+    }
+
+
+    .partner-intro-layout {
+        display: block;
+
+        padding-top: 48px;
+    }
+
+
+    .partner-intro h1 {
+        max-width: 680px;
+
+        font-size: clamp(3.5rem, 9vw, 5rem);
+    }
+
+
+    .partner-intro-copy {
+        min-height: auto;
+
+        margin-top: 38px;
+        padding-left: 0;
+
+        display: grid;
+        grid-template-columns: 1fr auto;
+
+        gap: 30px;
+
+        align-items: end;
+
+        border-left: 0;
+    }
+
+
+    .partner-intro-copy p {
+        max-width: 320px;
+    }
+
+
+    /* BRAND */
+
+    .brand-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .brand-tile {
+        min-height: 300px;
+    }
+
+
+    /* PARTNER PROGRAM */
+
+    .partner-program-heading {
+        display: block;
+
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+
+    .partner-program-heading h2 {
+        max-width: 650px;
+
+        font-size: clamp(3.4rem, 8vw, 5rem);
+    }
+
+
+    .partner-program-heading p {
+        max-width: 340px;
+
+        margin-top: 32px;
+        padding-left: 0;
+
+        border-left: 0;
+    }
+
+
+    /* ROWS */
+
+    .partner-type {
+        min-height: 105px;
+
+        grid-template-columns:
+            minmax(150px, .8fr) 1fr auto;
+
+        gap: 25px;
+    }
+
+
+    /* CTA */
+
+    .partner-program-bottom {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 620px) {
+
+
+    /* =====================================================
+       INTRO
+    ====================================================== */
+
+    .partner-intro {
+        padding:
+            112px var(--page-padding) 48px;
+    }
+
+
+    .partner-intro-meta {
+        padding-bottom: 12px;
+    }
+
+
+    .partner-intro-meta span:last-child {
+        opacity: .45;
+    }
+
+
+    .partner-intro-layout {
+        padding-top: 38px;
+    }
+
+
+    .partner-intro h1 {
+        font-size: clamp(3rem, 14vw, 4.3rem);
+        line-height: .89;
+    }
+
+
+    .partner-intro-copy {
+        margin-top: 32px;
+
+        gap: 20px;
+    }
+
+
+    .partner-intro-copy p {
+        max-width: 235px;
+
+        font-size: .69rem;
+    }
+
+
+    .partner-scroll-arrow {
+        width: 39px;
+        height: 39px;
+    }
+
+
+    /* =====================================================
+       BLACK BRANDS
+    ====================================================== */
+
+    .brand-stage {
+        padding:
+            34px var(--page-padding) 62px;
+
+        border-radius:
+            25px 25px 0 0;
+    }
+
+
+    .brand-stage-header span:last-child {
+        display: none;
+    }
+
+
+    .brand-gallery {
+        margin-top: 30px;
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .brand-tile {
+        min-height: 260px;
+
+        padding: 19px;
+    }
+
+
+    .brand-tile-logo {
+        padding:
+            30px 20px;
+    }
+
+
+    .brand-tile-logo img {
+        max-width: 66%;
+        max-height: 100px;
+    }
+
+
+    .logo-tis {
+        max-width: 39% !important;
+    }
+
+
+    .logo-marc {
+        max-width: 37% !important;
+        max-height: 110px !important;
+    }
+
+
+    /* =====================================================
+       PARTNER PROGRAM
+    ====================================================== */
+
+    .partner-program {
+        margin-top: -25px;
+
+        padding:
+            34px var(--page-padding) 48px;
+
+        border-radius:
+            25px 25px 0 0;
+    }
+
+
+    .partner-program-top span:last-child {
+        opacity: .45;
+    }
+
+
+    .partner-program-heading {
+        padding:
+            38px 0 38px;
+    }
+
+
+    .partner-program-heading h2 {
+        font-size: clamp(3rem, 13.5vw, 4.2rem);
+        line-height: .9;
+    }
+
+
+    .partner-program-heading p {
+        max-width: 280px;
+
+        margin-top: 27px;
+
+        font-size: .69rem;
+    }
+
+
+    /* =====================================================
+       PARTNER ROWS
+    ====================================================== */
+
+    .partner-type {
+        min-height: 0;
+
+        padding:
+            21px 0;
+
+        grid-template-columns:
+            1fr auto;
+
+        grid-template-rows:
+            auto auto;
+
+        gap:
+            12px 20px;
+    }
+
+
+    .partner-type strong {
+        grid-column: 1;
+        grid-row: 1;
+
+        font-size: 1.8rem;
+    }
+
+
+    .partner-type-copy {
+        grid-column: 1;
+        grid-row: 2;
+
+        font-size: .65rem;
+    }
+
+
+    .partner-type i {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+
+        align-self: center;
+
+        width: 34px;
+        height: 34px;
+    }
+
+
+    .partner-type:hover {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+
+    /* =====================================================
+       BOTTOM
+    ====================================================== */
+
+    .partner-program-bottom {
+        display: block;
+
+        padding-top: 32px;
+    }
+
+
+    .partner-program-message {
+        margin-bottom: 30px;
+    }
+
+
+    .partner-program-message p {
+        max-width: 280px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .partner-intro h1,
+    .partner-program-heading h2 {
+        letter-spacing: -.06em;
+    }
+
+
+    .partner-intro-copy p {
+        max-width: 205px;
+    }
+
+
+    .brand-tile {
+        min-height: 235px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .partner-scroll-arrow,
+    .brand-tile,
+    .brand-tile::before,
+    .brand-tile-logo img,
+    .brand-tile-bottom i,
+    .partner-type,
+    .partner-type i,
+    .partner-main-cta,
+    .partner-main-cta i {
+        transition: none;
+    }
+
+}/* =========================================================
+   FINAL INTRO SPACING FIX
+========================================================= */
+
+.partner-intro {
+    min-height: 0;
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.partner-intro-layout {
+    flex: none;
+    padding-top: 20px;
+    align-items: end;
+}
