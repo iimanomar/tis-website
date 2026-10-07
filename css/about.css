@@ -1,0 +1,1727 @@
+/* =========================================================
+   TIS EAST AFRICA
+   ABOUT PAGE
+   Complete replacement stylesheet
+========================================================= */
+
+
+/* =========================================================
+   01 — PAGE
+========================================================= */
+
+.about-page {
+    margin: 0;
+
+    --about-cream: #f3f2ee;
+    --about-grey: #d3d2cd;
+    --about-grey-light: #e3e2de;
+    --about-grey-mid: #b9b8b3;
+    --about-charcoal: #242424;
+    --about-black: #111111;
+    --about-red: #ed1c24;
+
+    background: var(--about-cream);
+    color: var(--about-black);
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   02 — HEADER
+========================================================= */
+
+.about-page .site-header {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 100;
+}
+
+.about-page .site-header .desktop-nav a,
+.about-page .site-header .nav-contact {
+    color: #111;
+}
+
+.about-page .site-header .nav-contact {
+    border-color: rgba(0, 0, 0, 0.28);
+}
+
+.about-page .site-header .menu-button span {
+    background: #111;
+}
+
+
+/* =========================================================
+   03 — ABOUT HERO
+========================================================= */
+
+.about-hero {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(100%, 1600px);
+
+    margin: 0 auto;
+
+    padding:
+        clamp(150px, 12vw, 190px) clamp(28px, 4.2vw, 68px) 92px;
+
+    background: var(--about-cream);
+}
+
+
+/* =========================================================
+   04 — HERO META
+========================================================= */
+
+.about-hero-meta {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding-bottom: 14px;
+
+    border-bottom:
+        1px solid rgba(0, 0, 0, 0.14);
+
+    font-size: 0.52rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+}
+
+.about-hero-meta span:last-child {
+    color: rgba(0, 0, 0, 0.38);
+}
+
+
+/* =========================================================
+   05 — HERO COMPOSITION
+========================================================= */
+
+.about-hero-stage {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.9fr) minmax(470px, 1.1fr);
+
+    grid-template-rows:
+        auto auto;
+
+    column-gap:
+        clamp(50px, 7vw, 115px);
+
+    row-gap: 0;
+
+    min-height: 540px;
+
+    padding:
+        clamp(48px, 5vw, 72px) 0 42px;
+}
+
+
+/* =========================================================
+   06 — HERO TITLE
+   EXACT SAME TYPOGRAPHIC SYSTEM AS SOLUTIONS
+========================================================= */
+
+.about-hero-title {
+    position: relative;
+
+    z-index: 4;
+
+    align-self: center;
+}
+
+.hero-kicker {
+    display: block;
+
+    margin-bottom: 25px;
+
+    color: var(--about-red);
+
+    font-size: 0.52rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.11em;
+
+    text-transform: uppercase;
+}
+
+.about-hero h1 {
+    margin: 0;
+
+    max-width: 900px;
+
+    font-size:
+        clamp(4.8rem, 6.6vw, 7.4rem);
+
+    line-height: 0.88;
+
+    letter-spacing: -0.07em;
+
+    font-weight: 400;
+}
+.about-hero h1 span {
+    color: var(--about-red);
+    font-style: italic;
+    font-weight: 300;
+}
+/*=========================================================
+   07 — HERO COPY
+========================================================= */
+
+.about-hero-copy {
+    position: relative;
+
+    z-index: 5;
+
+    grid-column: 1;
+
+    align-self: end;
+
+    width: 72%;
+
+    margin-left: auto;
+
+    padding:
+        20px 0 0 20px;
+
+    border-left:
+        1px solid rgba(0, 0, 0, 0.16);
+}
+
+.about-hero-copy p {
+    margin:
+        0 0 16px;
+
+    color: rgba(0, 0, 0, 0.5);
+
+    font-size: 0.8rem;
+
+    font-weight: 300;
+
+    line-height: 1.62;
+}
+
+.about-hero-copy .hero-lead {
+    color: rgba(0, 0, 0, 0.84);
+
+    font-size:
+        clamp(0.95rem, 1.2vw, 1.12rem);
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   08 — HERO COLLAGE
+========================================================= */
+
+.about-hero-collage {
+    position: relative;
+
+    grid-column: 2;
+
+    grid-row: 1 / span 2;
+
+    align-self: stretch;
+
+    min-height: 465px;
+}
+
+
+/* IMAGES */
+
+.hero-image {
+    overflow: hidden;
+}
+
+.hero-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 1.1s cubic-bezier(.2, .75, .2, 1);
+}
+
+.about-hero-collage:hover .hero-image-large img {
+    transform: scale(1.025);
+}
+
+
+/* LARGE IMAGE */
+
+.hero-image-large {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 79%;
+    height: 78%;
+
+    border-radius: 22px;
+}
+
+
+/* SMALL IMAGE / FUTURE VIDEO */
+
+.hero-image-small {
+    position: absolute;
+
+    z-index: 4;
+
+    left: 0;
+    bottom: 0;
+
+    width: 39%;
+    height: 48%;
+
+    border:
+        8px solid var(--about-cream);
+
+    border-radius: 18px;
+}
+
+
+/* RED DETAIL */
+
+.hero-red-card {
+    position: absolute;
+
+    z-index: 3;
+
+    right: 0;
+    bottom: 0;
+
+    width: 38%;
+    height: 27%;
+
+    display: flex;
+
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 24px;
+
+    border-radius: 18px;
+
+    background: var(--about-red);
+
+    color: #fff;
+}
+
+.hero-red-card span {
+    margin-bottom: 5px;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 0.45rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+}
+
+.hero-red-card strong {
+    font-size:
+        clamp(1.25rem, 2vw, 2rem);
+
+    font-weight: 300;
+
+    line-height: 1;
+
+    letter-spacing: -0.045em;
+}
+
+
+/* =========================================================
+   09 — HERO FACTS
+========================================================= */
+
+.about-facts {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    border-top:
+        1px solid rgba(0, 0, 0, 0.14);
+}
+
+.about-facts>div {
+    min-height: 78px;
+
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+
+    padding:
+        0 clamp(16px, 2vw, 30px);
+
+    border-right:
+        1px solid rgba(0, 0, 0, 0.1);
+}
+
+.about-facts>div:first-child {
+    padding-left: 0;
+}
+
+.about-facts>div:last-child {
+    border-right: 0;
+}
+
+.about-facts strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size:
+        clamp(0.95rem, 1.2vw, 1.12rem);
+
+    font-weight: 500;
+
+    letter-spacing: -0.025em;
+}
+
+.about-facts span {
+    color: rgba(0, 0, 0, 0.4);
+
+    font-size: 0.43rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.09em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   10 — GREY MEDIA SECTION
+   Curves over hero like Solutions
+========================================================= */
+
+.about-media {
+    position: relative;
+
+    z-index: 5;
+
+    margin-top: -34px;
+
+    padding:
+        clamp(92px, 9vw, 135px) clamp(28px, 4.2vw, 68px) clamp(85px, 8vw, 120px);
+
+    overflow: hidden;
+
+    border-radius:
+        34px 34px 0 0;
+
+    background: var(--about-grey);
+}
+
+
+/* =========================================================
+   11 — MEDIA HEADING
+========================================================= */
+
+.about-media-heading {
+    width: min(100%, 1464px);
+
+    margin:
+        0 auto clamp(45px, 5vw, 70px);
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(180px, 0.42fr) minmax(0, 1.58fr);
+
+    align-items: end;
+
+    gap:
+        clamp(50px, 8vw, 120px);
+}
+
+.about-media-heading>span {
+    max-width: 220px;
+
+    padding-top: 12px;
+
+    border-top:
+        1px solid rgba(0, 0, 0, 0.22);
+
+    font-size: 0.5rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.1em;
+
+    line-height: 1.5;
+
+    text-transform: uppercase;
+}
+
+.about-media-heading h2 {
+    max-width: 850px;
+
+    margin: 0;
+
+    font-size:
+        clamp(3.8rem, 5.4vw, 6.1rem);
+
+    line-height: 0.92;
+
+    letter-spacing: -0.065em;
+
+    font-weight: 400;
+}
+
+.about-media-heading em {
+    color: var(--about-red);
+
+    font-family: inherit;
+
+    font-weight: 300;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   12 — MAIN MEDIA
+========================================================= */
+
+.about-video-wrap {
+    position: relative;
+
+    width: min(84%, 1230px);
+
+    height:
+        clamp(430px, 50vw, 680px);
+
+    margin-left: auto;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background: var(--about-grey-mid);
+
+    isolation: isolate;
+}
+
+.about-video-poster,
+.about-video {
+    position: absolute;
+
+    inset: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.about-video-poster {
+    z-index: 0;
+}
+
+.about-video {
+    z-index: 1;
+}
+
+.video-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(180deg,
+            rgba(0, 0, 0, 0.02) 45%,
+            rgba(0, 0, 0, 0.46) 100%);
+}
+
+.video-caption {
+    position: absolute;
+
+    z-index: 3;
+
+    right: 22px;
+    bottom: 19px;
+    left: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    color: #fff;
+
+    font-size: 0.46rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+}
+
+.about-media-note {
+    width: min(84%, 1230px);
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin:
+        18px 0 0 auto;
+}
+
+.media-dot {
+    width: 6px;
+    height: 6px;
+
+    flex: 0 0 auto;
+
+    margin-top: 5px;
+
+    border-radius: 50%;
+
+    background: var(--about-red);
+}
+
+.about-media-note p {
+    max-width: 330px;
+
+    margin: 0;
+
+    color: rgba(0, 0, 0, 0.5);
+
+    font-size: 0.67rem;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   13 — STORY
+   Charcoal panel curves over grey
+========================================================= */
+
+.about-story {
+    position: relative;
+
+    z-index: 6;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(180px, 0.35fr) minmax(0, 1.65fr);
+
+    gap:
+        clamp(60px, 9vw, 140px);
+
+    margin-top: -34px;
+
+    padding:
+        clamp(105px, 11vw, 165px) clamp(28px, 4.2vw, 68px) clamp(90px, 10vw, 145px);
+
+    overflow: hidden;
+
+    border-radius:
+        34px 34px 0 0;
+
+    background: var(--about-charcoal);
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   14 — STORY SIDE
+========================================================= */
+
+.story-side {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 420px;
+}
+
+.story-side>span {
+    color: var(--about-red);
+
+    font-size: 0.52rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.11em;
+
+    text-transform: uppercase;
+}
+
+.story-side p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.42);
+
+    font-size: 0.75rem;
+
+    font-weight: 300;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   15 — STORY TITLE
+========================================================= */
+
+.story-main h2 {
+    max-width: 900px;
+
+    margin:
+        0 0 clamp(65px, 8vw, 105px);
+
+    font-size:
+        clamp(3.8rem, 5.4vw, 6.1rem);
+
+    line-height: 0.92;
+
+    letter-spacing: -0.065em;
+
+    font-weight: 400;
+}
+
+.story-main h2 span {
+    display: block;
+
+    color: var(--about-red);
+}
+
+
+/* =========================================================
+   16 — STORY COPY
+========================================================= */
+
+.story-copy {
+    max-width: 520px;
+
+    margin-left: auto;
+
+    padding-left: 25px;
+
+    border-left:
+        1px solid rgba(255, 255, 255, 0.16);
+}
+
+.story-copy p {
+    margin:
+        0 0 19px;
+
+    color: rgba(255, 255, 255, 0.48);
+
+    font-size: 0.84rem;
+
+    font-weight: 300;
+
+    line-height: 1.65;
+}
+
+.story-copy .story-lead {
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size:
+        clamp(1rem, 1.25vw, 1.18rem);
+
+    line-height: 1.5;
+}
+
+
+/* BACKGROUND TIS MARK */
+
+.story-mark {
+    position: absolute;
+
+    right: -35px;
+    bottom: -55px;
+
+    font-size:
+        clamp(9rem, 18vw, 19rem);
+
+    font-weight: 600;
+
+    line-height: 0.7;
+
+    letter-spacing: -0.08em;
+
+    color: rgba(255, 255, 255, 0.025);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   17 — EXPERIENCE CENTER
+   Curves over charcoal
+========================================================= */
+
+.about-experience {
+    position: relative;
+
+    z-index: 7;
+
+    display: grid;
+
+    grid-template-columns:
+        0.9fr 1.1fr;
+
+    min-height: 760px;
+
+    margin-top: -34px;
+
+    overflow: hidden;
+
+    border-radius:
+        34px 34px 0 0;
+
+    background: var(--about-grey-light);
+}
+
+
+/* =========================================================
+   18 — EXPERIENCE CONTENT
+========================================================= */
+
+.experience-content {
+    display: flex;
+
+    flex-direction: column;
+
+    padding:
+        clamp(80px, 8vw, 115px) clamp(35px, 5vw, 80px) clamp(50px, 6vw, 90px);
+}
+
+.experience-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding-bottom: 12px;
+
+    border-bottom:
+        1px solid rgba(0, 0, 0, 0.14);
+
+    color: rgba(0, 0, 0, 0.48);
+
+    font-size: 0.48rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   19 — EXPERIENCE HEADING
+========================================================= */
+
+.experience-heading {
+    margin:
+        clamp(60px, 7vw, 100px) 0 auto;
+}
+
+.experience-heading h2 {
+    max-width: 620px;
+
+    margin: 0;
+
+    font-size:
+        clamp(3.8rem, 5.4vw, 6.1rem);
+
+    line-height: 0.92;
+
+    letter-spacing: -0.065em;
+
+    font-weight: 400;
+}
+
+.experience-heading h2 span {
+    display: block;
+
+    color: var(--about-red);
+}
+
+
+/* =========================================================
+   20 — EXPERIENCE BOTTOM
+========================================================= */
+
+.experience-bottom {
+    display: grid;
+
+    grid-template-columns:
+        1fr 0.8fr;
+
+    gap: 45px;
+
+    padding-top: 28px;
+
+    border-top:
+        1px solid rgba(0, 0, 0, 0.14);
+}
+
+.experience-copy p {
+    margin:
+        0 0 17px;
+
+    color: rgba(0, 0, 0, 0.52);
+
+    font-size: 0.77rem;
+
+    font-weight: 300;
+
+    line-height: 1.58;
+}
+
+.experience-address>span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--about-red);
+
+    font-size: 0.44rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.09em;
+
+    text-transform: uppercase;
+}
+
+.experience-address p {
+    margin:
+        0 0 22px;
+
+    font-size: 0.73rem;
+
+    line-height: 1.5;
+}
+
+.experience-address a {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding-bottom: 7px;
+
+    border-bottom:
+        1px solid rgba(0, 0, 0, 0.35);
+
+    color: #111;
+
+    font-size: 0.46rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.09em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   21 — EXPERIENCE VISUAL
+========================================================= */
+
+.experience-visual {
+    position: relative;
+
+    min-height: 760px;
+
+    overflow: hidden;
+
+    background: var(--about-grey-mid);
+}
+
+
+/* MAIN IMAGE */
+
+.experience-main-image {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 78%;
+    height: 74%;
+
+    overflow: hidden;
+}
+
+.experience-main-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 1.1s cubic-bezier(.2, .75, .2, 1);
+}
+
+.experience-main-image:hover img {
+    transform: scale(1.025);
+}
+
+
+/* SMALL VIDEO */
+
+.experience-video-wrap {
+    position: absolute;
+
+    left: 6%;
+    bottom: 6%;
+
+    z-index: 3;
+
+    width: 36%;
+
+    aspect-ratio: 9 / 13;
+
+    overflow: hidden;
+
+    background: #aaa;
+}
+
+.experience-video-poster,
+.experience-video {
+    position: absolute;
+
+    inset: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.experience-video-poster {
+    z-index: 0;
+}
+
+.experience-video {
+    z-index: 1;
+}
+
+.experience-video-meta {
+    position: absolute;
+
+    z-index: 2;
+
+    right: 13px;
+    bottom: 12px;
+    left: 13px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 8px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.5);
+
+    color: #fff;
+
+    font-size: 0.4rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.09em;
+
+    text-transform: uppercase;
+}
+
+
+/* RED BLOCK */
+
+.experience-red-block {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 42%;
+    height: 26%;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding: 25px;
+
+    background: var(--about-red);
+
+    color: #fff;
+}
+
+.experience-red-block span {
+    font-size:
+        clamp(1.25rem, 2vw, 2rem);
+
+    font-weight: 300;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.04em;
+}
+
+
+/* =========================================================
+   22 — CLOSING
+========================================================= */
+
+.about-closing {
+    position: relative;
+
+    z-index: 8;
+
+    padding:
+        38px clamp(28px, 4.2vw, 68px);
+
+    background: var(--about-cream);
+}
+
+
+/* BLACK FLOATING CTA — CURVED */
+
+.about-closing-inner {
+    min-height: 94px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding:
+        0 32px;
+
+    overflow: hidden;
+
+    border-radius: 26px;
+
+    background: var(--about-charcoal);
+
+    color: #fff;
+}
+
+.closing-label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.closing-label>span {
+    width: 6px;
+    height: 6px;
+
+    flex: 0 0 auto;
+
+    border-radius: 50%;
+
+    background: var(--about-red);
+}
+
+.closing-label p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.5);
+
+    font-size: 0.47rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+}
+
+.closing-link {
+    min-width: 280px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding:
+        12px 0 8px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.35);
+
+    color: #fff;
+
+    font-size: 0.5rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+}
+
+.closing-arrow {
+    font-size: 0.9rem;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.closing-link:hover .closing-arrow {
+    color: var(--about-red);
+
+    transform:
+        translate(3px, -3px);
+}
+
+
+/* =========================================================
+   23 — TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .about-hero {
+        padding-top: 140px;
+    }
+
+    .about-hero-stage {
+        grid-template-columns:
+            minmax(0, 0.85fr) minmax(400px, 1.15fr);
+
+        column-gap: 45px;
+    }
+
+    .about-hero h1,
+    .about-media-heading h2,
+    .story-main h2,
+    .experience-heading h2 {
+        font-size:
+            clamp(3.2rem, 6vw, 4.8rem);
+    }
+
+    .about-hero-copy {
+        width: 90%;
+    }
+
+    .about-story {
+        grid-template-columns:
+            minmax(150px, 0.3fr) minmax(0, 1.7fr);
+
+        gap: 50px;
+    }
+
+    .about-experience {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .experience-bottom {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   24 — SMALL TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .about-hero {
+        padding:
+            125px 24px 80px;
+    }
+
+    .about-hero-stage {
+        display: flex;
+
+        flex-direction: column;
+
+        min-height: 0;
+
+        padding:
+            50px 0 35px;
+    }
+
+    .about-hero-title {
+        order: 1;
+    }
+
+    .about-hero h1 {
+        max-width: 650px;
+
+        font-size:
+            clamp(3rem, 8vw, 4.5rem);
+    }
+
+
+    /* COLLAGE */
+
+    .about-hero-collage {
+        order: 2;
+
+        width: 100%;
+
+        min-height: 540px;
+
+        margin-top: 48px;
+    }
+
+    .hero-image-large {
+        width: 82%;
+        height: 74%;
+    }
+
+    .hero-image-small {
+        width: 42%;
+        height: 45%;
+    }
+
+    .hero-red-card {
+        width: 43%;
+        height: 26%;
+    }
+
+
+    /* COPY */
+
+    .about-hero-copy {
+        order: 3;
+
+        width: 75%;
+
+        margin:
+            42px 0 0 auto;
+    }
+
+
+    /* MEDIA */
+
+    .about-media-heading {
+        display: block;
+    }
+
+    .about-media-heading>span {
+        display: block;
+
+        margin-bottom: 45px;
+    }
+
+    .about-video-wrap,
+    .about-media-note {
+        width: 100%;
+    }
+
+
+    /* STORY */
+
+    .about-story {
+        display: block;
+    }
+
+    .story-side {
+        display: block;
+
+        min-height: 0;
+
+        margin-bottom: 65px;
+    }
+
+    .story-side p {
+        margin-top: 18px;
+    }
+
+
+    /* EXPERIENCE */
+
+    .about-experience {
+        display: flex;
+
+        flex-direction: column;
+
+        min-height: 0;
+    }
+
+    .experience-content {
+        order: 2;
+    }
+
+    .experience-visual {
+        order: 1;
+
+        min-height: 650px;
+    }
+}
+
+
+/* =========================================================
+   25 — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* HEADER */
+
+    .about-page .site-header .desktop-nav,
+    .about-page .site-header .nav-contact {
+        display: none;
+    }
+
+
+    /* HERO */
+
+    .about-hero {
+        padding:
+            105px 20px 65px;
+    }
+
+    .about-hero-meta {
+        font-size: 0.43rem;
+    }
+
+    .about-hero-meta span:last-child {
+        display: none;
+    }
+
+    .about-hero-stage {
+        padding:
+            42px 0 30px;
+    }
+
+    .hero-kicker {
+        margin-bottom: 22px;
+
+        font-size: 0.45rem;
+    }
+
+    .about-hero h1 {
+        max-width: 340px;
+
+        font-size: 2.65rem;
+
+        line-height: 0.96;
+
+        letter-spacing: -0.055em;
+    }
+
+
+    /* HERO COLLAGE */
+
+    .about-hero-collage {
+        min-height: 440px;
+
+        margin-top: 38px;
+    }
+
+    .hero-image-large {
+        width: 84%;
+        height: 72%;
+
+        border-radius: 17px;
+    }
+
+    .hero-image-small {
+        width: 45%;
+        height: 44%;
+
+        border-width: 6px;
+
+        border-radius: 14px;
+    }
+
+    .hero-red-card {
+        width: 46%;
+        height: 25%;
+
+        padding: 18px;
+
+        border-radius: 14px;
+    }
+
+
+    /* COPY */
+
+    .about-hero-copy {
+        width: 84%;
+
+        margin-top: 38px;
+
+        padding-left: 17px;
+    }
+
+    .about-hero-copy .hero-lead {
+        font-size: 0.84rem;
+    }
+
+    .about-hero-copy p {
+        font-size: 0.72rem;
+    }
+
+
+    /* FACTS */
+
+    .about-facts {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .about-facts>div {
+        min-height: 72px;
+
+        padding:
+            0 12px;
+
+        border-bottom:
+            1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .about-facts>div:nth-child(2) {
+        border-right: 0;
+    }
+
+    .about-facts>div:nth-child(3),
+    .about-facts>div:nth-child(4) {
+        border-bottom: 0;
+    }
+
+
+    /* =====================================================
+       CURVED PANEL TRANSITIONS
+    ====================================================== */
+
+    .about-media,
+    .about-story,
+    .about-experience {
+        margin-top: -24px;
+
+        border-radius:
+            24px 24px 0 0;
+    }
+
+
+    /* MEDIA */
+
+    .about-media {
+        padding:
+            75px 20px 75px;
+    }
+
+    .about-media-heading {
+        margin-bottom: 42px;
+    }
+
+    .about-media-heading>span {
+        margin-bottom: 40px;
+    }
+
+    .about-media-heading h2,
+    .story-main h2,
+    .experience-heading h2 {
+        font-size: 2.65rem;
+
+        line-height: 0.96;
+
+        letter-spacing: -0.055em;
+    }
+
+    .about-video-wrap {
+        height: 60svh;
+
+        min-height: 440px;
+
+        border-radius: 17px;
+    }
+
+    .video-caption span:last-child {
+        display: none;
+    }
+
+
+    /* STORY */
+
+    .about-story {
+        padding:
+            85px 20px 75px;
+    }
+
+    .story-side {
+        margin-bottom: 55px;
+    }
+
+    .story-main h2 {
+        margin-bottom: 55px;
+    }
+
+    .story-copy {
+        width: 86%;
+
+        margin-left: auto;
+    }
+
+
+    /* EXPERIENCE */
+
+    .experience-content {
+        padding:
+            80px 20px 70px;
+    }
+
+    .experience-visual {
+        min-height: 620px;
+    }
+
+    .experience-main-image {
+        width: 84%;
+        height: 72%;
+    }
+
+    .experience-video-wrap {
+        width: 43%;
+
+        left: 6%;
+        bottom: 5%;
+    }
+
+    .experience-red-block {
+        width: 46%;
+        height: 28%;
+    }
+
+    .experience-heading {
+        margin:
+            55px 0 65px;
+    }
+
+
+    /* CTA */
+
+    .about-closing {
+        padding:
+            30px 20px;
+    }
+
+    .about-closing-inner {
+        min-height: 135px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+        justify-content: center;
+
+        gap: 27px;
+
+        padding: 23px;
+
+        border-radius: 20px;
+    }
+
+    .closing-link {
+        width: 100%;
+
+        min-width: 0;
+    }
+}
+
+
+/* =========================================================
+   26 — VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .about-hero h1,
+    .about-media-heading h2,
+    .story-main h2,
+    .experience-heading h2 {
+        font-size: 2.35rem;
+    }
+
+    .about-hero-collage {
+        min-height: 400px;
+    }
+}
+
+
+/* =========================================================
+   27 — REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-image img,
+    .experience-main-image img,
+    .closing-arrow {
+        transition: none;
+    }
+
+    .about-video,
+    .experience-video {
+        display: none;
+    }
+}
