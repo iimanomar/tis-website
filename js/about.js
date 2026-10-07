@@ -4,41 +4,49 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     videos.forEach((video) => {
-        // Required for silent native autoplay
+        // Prepare video immediately
         video.muted = true;
         video.defaultMuted = true;
+        video.loop = true;
         video.playsInline = true;
+        video.controls = false;
 
-        // Keep these attributes explicitly set
         video.setAttribute("muted", "");
         video.setAttribute("playsinline", "");
-        video.setAttribute("autoplay", "");
-        video.setAttribute("loop", "");
-
-        // Remove Safari's visible player controls
         video.removeAttribute("controls");
 
-        // Let the video's native autoplay happen first
-        const startVideo = () => {
-            video.muted = true;
+        // Force Safari to load the media now
+        video.load();
+    });
 
-            if (video.paused) {
-                video.play().catch((error) => {
-                    console.log(
-                        `Autoplay blocked: ${video.className}`,
-                        error.name
-                    );
-                });
-            }
-        };
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                const video = entry.target;
 
-        // Safari may need the media loaded before accepting play()
-        if (video.readyState >= 2) {
-            startVideo();
-        } else {
-            video.addEventListener("canplay", startVideo, {
-                once: true
+                if (entry.isIntersecting) {
+                    video.muted = true;
+
+                    video.play().catch((error) => {
+                        console.log(
+                            `${video.className} blocked:`,
+                            error.name,
+                            error.message
+                        );
+                    });
+                } else {
+                    video.pause();
+                }
             });
+        },
+        {
+            // Trigger BEFORE the video fully reaches the screen
+            rootMargin: "250px 0px 250px 0px",
+            threshold: 0.01
         }
+    );
+
+    videos.forEach((video) => {
+        observer.observe(video);
     });
 });

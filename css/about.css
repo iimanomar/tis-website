@@ -1727,3 +1727,32 @@
         .experience-video {
             transition: none;
         }}
+                /* =========================================
+           ABOUT VIDEOS — CUSTOM SCROLL PLAYBACK
+        ========================================= */
+        
+                .about-video,
+                .experience-video {
+                    pointer-events: none;
+                }
+        
+                .about-video::-webkit-media-controls,
+                .experience-video::-webkit-media-controls {
+                    display: none !important;
+                }
+        
+                .about-video::-webkit-media-controls-panel,
+                .experience-video::-webkit-media-controls-panel {
+                    display: none !important;
+                }
+        
+                .about-video::-webkit-media-controls-play-button,
+                .experience-video::-webkit-media-controls-play-button {
+                    display: none !important;
+                }
+        
+                .about-video::-webkit-media-controls-start-playback-button,
+                .experience-video::-webkit-media-controls-start-playback-button {
+                    display: none !important;
+                    -webkit-appearance: none;
+                }
