@@ -1723,8 +1723,7 @@
         transition: none;
     }
 
-    .about-video,
-    .experience-video {
-        display: none;
-    }
-}
+        .about-video,
+        .experience-video {
+            transition: none;
+        }}
