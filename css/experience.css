@@ -3480,3 +3480,321 @@ html.tis-experience-embedded .experience-stage {
 #music-play.playing .music-play-icon::after {
     right: 1px;
 }
+/* =========================================================
+   TRY TIS — SOPHISTICATED SPARKLES
+========================================================= */
+
+/* allow sparkle effects to extend around the phone */
+.tis-demo-trigger {
+    overflow: visible;
+}
+
+
+/* LARGE FOUR-POINT LIGHT */
+
+.tis-demo-trigger::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+
+    top: -12px;
+    right: 16px;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    box-shadow:
+        -48px 19px 0 -1px rgba(255, 255, 255, .9),
+        -25px -18px 0 -1px rgba(227, 30, 36, .95),
+        18px 27px 0 -1px rgba(255, 255, 255, .75),
+        -62px -9px 0 -1px rgba(255, 255, 255, .55),
+        28px -13px 0 -1px rgba(227, 30, 36, .7);
+
+    animation:
+        tisSparkleDrift 4.8s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+
+/* SECOND SET — offset timing */
+
+.tis-demo-trigger::after {
+    content: "";
+
+    position: absolute;
+
+    z-index: -1;
+
+    right: 5px;
+    top: 20px;
+
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .95);
+
+    box-shadow:
+        -36px -26px 0 rgba(255, 255, 255, .7),
+        -57px 12px 0 rgba(227, 30, 36, .75),
+        13px -17px 0 rgba(255, 255, 255, .8),
+        -19px 38px 0 rgba(255, 255, 255, .55);
+
+    animation:
+        tisSparkleDriftTwo 5.7s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   SPARKLE MOVEMENT
+========================================================= */
+
+@keyframes tisSparkleDrift {
+
+    0%,
+    15%,
+    100% {
+        opacity: 0;
+        transform:
+            translate(0, 8px) scale(.3) rotate(0deg);
+    }
+
+    30% {
+        opacity: .95;
+        transform:
+            translate(-3px, 0) scale(1) rotate(35deg);
+    }
+
+    48% {
+        opacity: .45;
+        transform:
+            translate(-7px, -9px) scale(.65) rotate(70deg);
+    }
+
+    63% {
+        opacity: .9;
+        transform:
+            translate(-10px, -15px) scale(.9) rotate(110deg);
+    }
+
+    78% {
+        opacity: 0;
+        transform:
+            translate(-14px, -24px) scale(.25) rotate(150deg);
+    }
+}
+
+
+@keyframes tisSparkleDriftTwo {
+
+    0%,
+    30%,
+    100% {
+        opacity: 0;
+        transform:
+            translate(0, 4px) scale(.2);
+    }
+
+    42% {
+        opacity: .8;
+        transform:
+            translate(-4px, -5px) scale(.85);
+    }
+
+    58% {
+        opacity: .35;
+        transform:
+            translate(-8px, -12px) scale(.5);
+    }
+
+    72% {
+        opacity: .9;
+        transform:
+            translate(-12px, -18px) scale(1);
+    }
+
+    86% {
+        opacity: 0;
+        transform:
+            translate(-17px, -28px) scale(.2);
+    }
+}
+
+/* =========================================================
+   TRY TIS — EXTRA SPARKLE FIELD
+========================================================= */
+
+.tis-demo-trigger-label::before,
+.tis-demo-trigger-label::after {
+    content: "";
+    position: absolute;
+
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+    pointer-events: none;
+
+    background: rgba(255, 255, 255, .95);
+}
+
+
+/* sparkle cluster 3 */
+
+.tis-demo-trigger-label::before {
+    top: -14px;
+    left: 18px;
+
+    box-shadow:
+        22px -10px 0 rgba(255, 255, 255, .95),
+        47px 4px 0 rgba(227, 30, 36, .85),
+        67px -15px 0 rgba(255, 255, 255, .75),
+        84px 8px 0 rgba(255, 255, 255, .9),
+        102px -5px 0 rgba(227, 30, 36, .65),
+        35px 25px 0 rgba(255, 255, 255, .8);
+
+    animation: tisExtraSparkles 4.2s ease-in-out infinite;
+}
+
+
+/* sparkle cluster 4 — different timing */
+
+.tis-demo-trigger-label::after {
+    bottom: -10px;
+    right: 20px;
+
+    box-shadow:
+        -20px 7px 0 rgba(255, 255, 255, .9),
+        -43px -8px 0 rgba(227, 30, 36, .8),
+        -66px 9px 0 rgba(255, 255, 255, .7),
+        -89px -4px 0 rgba(255, 255, 255, .95),
+        12px -19px 0 rgba(255, 255, 255, .75);
+
+    animation: tisExtraSparklesTwo 5.1s ease-in-out infinite;
+}
+
+
+@keyframes tisExtraSparkles {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: translateY(7px) scale(.35);
+    }
+
+    20% {
+        opacity: .35;
+    }
+
+    38% {
+        opacity: 1;
+        transform: translateY(-2px) scale(1);
+    }
+
+    58% {
+        opacity: .45;
+    }
+
+    72% {
+        opacity: .9;
+        transform: translateY(-11px) scale(.75);
+    }
+
+    88% {
+        opacity: 0;
+        transform: translateY(-18px) scale(.25);
+    }
+}
+
+
+@keyframes tisExtraSparklesTwo {
+
+    0%,
+    18%,
+    100% {
+        opacity: 0;
+        transform: translateY(5px) scale(.25);
+    }
+
+    35% {
+        opacity: .85;
+        transform: translateY(0) scale(.9);
+    }
+
+    53% {
+        opacity: .3;
+    }
+
+    68% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1);
+    }
+
+    86% {
+        opacity: 0;
+        transform: translateY(-20px) scale(.3);
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .tis-demo-trigger-label::before,
+    .tis-demo-trigger-label::after {
+        animation: none;
+        opacity: 0;
+    }
+
+}
+
+/* =========================================================
+   SOFT GLOW WHEN HOVERED
+========================================================= */
+
+.tis-demo-trigger:hover::before,
+.tis-demo-trigger:hover::after {
+    animation-duration: 2.8s;
+}
+
+
+/* MOBILE — slightly calmer */
+
+@media (max-width: 600px) {
+
+    .tis-demo-trigger::before {
+        transform: scale(.8);
+    }
+
+    .tis-demo-trigger::after {
+        display: none;
+    }
+
+}
+
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .tis-demo-trigger::before,
+    .tis-demo-trigger::after {
+        animation: none;
+        opacity: 0;
+    }
+
+}/* =========================================================
+   EMBEDDED POPUP — REDUCE TOP WHITE SPACE
+========================================================= */
+
+html.tis-experience-embedded .tis-experience {
+    padding-top: 42px !important;
+}

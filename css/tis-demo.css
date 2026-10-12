@@ -1045,3 +1045,20 @@ body.tis-demo-open .floating-nav {
     }
 
 }
+.demo-curtain::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    opacity: 0.48;
+
+    background:
+        repeating-linear-gradient(90deg,
+            rgba(255, 255, 255, 0.20) 0px,
+            rgba(255, 255, 255, 0.04) 8px,
+            rgba(0, 0, 0, 0.10) 18px,
+            rgba(255, 255, 255, 0.05) 27px,
+            rgba(0, 0, 0, 0.07) 35px,
+            rgba(255, 255, 255, 0.14) 44px);
+}
