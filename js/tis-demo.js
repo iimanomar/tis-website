@@ -8,7 +8,75 @@ document.addEventListener("DOMContentLoaded", () => {
     const trigger = document.querySelector(".tis-demo-trigger");
 
     if (!trigger) return;
+   
+    /* =========================================================
+       TIS EAST AFRICA
+       GLOBAL INTERACTIVE EXPERIENCE
+    ========================================================= */
 
+    document.addEventListener("DOMContentLoaded", () => {
+
+        const trigger = document.querySelector(".tis-demo-trigger");
+
+        if (!trigger) return;
+
+
+      
+
+        /* =====================================================
+           EXPERIENCE MODAL
+        ===================================================== */
+
+        const modal = document.querySelector(".tis-demo-modal");
+
+        if (!modal) return;
+
+        const closeButton = modal.querySelector(".tis-demo-close");
+        const backdrop = modal.querySelector(".tis-demo-backdrop");
+
+
+        function openExperience() {
+
+            modal.classList.add("open");
+
+            document.body.classList.add("tis-demo-open");
+
+            modal.setAttribute("aria-hidden", "false");
+        }
+
+
+        function closeExperience() {
+
+            modal.classList.remove("open");
+
+            document.body.classList.remove("tis-demo-open");
+
+            modal.setAttribute("aria-hidden", "true");
+        }
+
+
+        trigger.addEventListener("click", openExperience);
+
+
+        if (closeButton) {
+            closeButton.addEventListener("click", closeExperience);
+        }
+
+
+        if (backdrop) {
+            backdrop.addEventListener("click", closeExperience);
+        }
+
+
+        document.addEventListener("keydown", (event) => {
+
+            if (event.key === "Escape" && modal.classList.contains("open")) {
+                closeExperience();
+            }
+
+        });
+
+    });
 
     /* =====================================================
        CREATE POPUP

@@ -242,11 +242,25 @@
 
     opacity: 0;
 
+    /* warm cream curtain fabric */
     background:
         linear-gradient(90deg,
-            rgba(28, 29, 30, 0.97),
-            rgba(52, 53, 54, 0.96),
-            rgba(29, 30, 31, 0.97));
+            #cfc8ba 0%,
+            #eee9df 8%,
+            #c8c0b2 16%,
+            #f1ede4 25%,
+            #c6beaf 34%,
+            #ebe5da 43%,
+            #c9c1b3 52%,
+            #f0ebe1 61%,
+            #c5bdae 70%,
+            #e9e3d8 79%,
+            #c8c0b2 88%,
+            #e7e1d6 100%);
+
+    box-shadow:
+        inset -12px 0 22px rgba(0, 0, 0, 0.10),
+        inset 12px 0 22px rgba(255, 255, 255, 0.12);
 
     transition:
         transform 850ms cubic-bezier(.65, 0, .35, 1),
@@ -259,14 +273,16 @@
     position: absolute;
     inset: 0;
 
-    opacity: 0.35;
+    opacity: 0.48;
 
     background:
         repeating-linear-gradient(90deg,
-            transparent 0,
-            transparent 26px,
-            rgba(255, 255, 255, 0.07) 27px,
-            transparent 30px);
+            rgba(255, 255, 255, 0.20) 0px,
+            rgba(255, 255, 255, 0.04) 8px,
+            rgba(0, 0, 0, 0.10) 18px,
+            rgba(255, 255, 255, 0.05) 27px,
+            rgba(0, 0, 0, 0.07) 35px,
+            rgba(255, 255, 255, 0.14) 44px);
 }
 
 .demo-curtain-left {
@@ -3404,7 +3420,9 @@ html.tis-experience-embedded .experience-stage {
 
 .app-bottom-nav button>span {
     font-size: 10px !important;
-}/* =========================================================
+}
+
+/* =========================================================
    MUSIC PLAY / PAUSE ICON
    Pure CSS — no emoji
 ========================================================= */
